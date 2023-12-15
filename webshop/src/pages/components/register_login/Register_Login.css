@@ -1,0 +1,75 @@
+.auth-form-container,
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    padding: 0.25rem 0;
+    color: black;
+}
+
+input {
+    font-size: 18px;
+    margin: 0.25rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    color: black;
+}
+
+button {
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-button,
+.register-button {
+    background: transparent;
+    border: 2px solid #91C9FF;
+    outline: none;
+    transition: 0.5s ease-in-out;
+}
+
+.login-button:hover,
+.register-button:hover {
+    background-color: #91C9FF;
+}
+
+.link-button {
+    text-transform: lowercase;
+    background: none;
+    background-color: none;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.link-button:hover {
+    color: salmon;
+}
+
+.register-form {
+    height: 26rem;
+    width: 25rem;
+    border: 3px black solid;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px 5px 20px;
+}
+
+.login-form {
+    height: 20rem;
+    width: 25rem;
+    border: 3px black solid;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px 20px 5px;
+}
