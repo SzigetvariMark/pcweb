@@ -1,12 +1,10 @@
 .header {
-    margin: ö;
-    padding: 0rem 15rem;
+    margin: 0;
 }
 
 .nav-container {
     color: black;
     display: flex;
-    background-color: cadetblue;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
@@ -18,7 +16,6 @@
     margin: 0;
     height: 3rem;
 }
-
 
 .nav-container ul {
     padding: 0;
@@ -57,9 +54,12 @@
 .top-nav {
     display: flex;
     justify-content: space-between;
+    background-color: #ba9a5b;    
     align-items: center;
     padding-right: 18%;
     padding-left: 18%;
+    color: aliceblue;
+    height: 3rem;
 }
 
 .top-nav ul{
@@ -70,5 +70,6 @@
 .top-nav a{
     text-decoration: none;
     list-style: none;
+    color: aliceblue;
 }
 

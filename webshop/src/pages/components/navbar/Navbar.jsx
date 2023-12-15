@@ -7,8 +7,8 @@ export default function Navbar() {
             <nav className="top-nav">
                 <h3>top-nav</h3>
                 <ul>
-                    <a><CustomLink to="/login">Bejelentkezés / Regisztráció</CustomLink></a>
-                    <a><CustomLink to="/basket">Cart</CustomLink></a>
+                    <a><CustomLink to="/login">Login / Register</CustomLink></a>
+                    <a><CustomLink to="/basket">Basket</CustomLink></a>
                 </ul>
             </nav>
             <nav className="nav-container">
