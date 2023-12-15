@@ -54,20 +54,21 @@
 .top-nav {
     display: flex;
     justify-content: space-between;
-    background-color: #ba9a5b;    
+    background-color: #ba9a5b;
     align-items: center;
     padding-right: 18%;
     padding-left: 18%;
     color: aliceblue;
-    height: 3rem;
+    height: 2.5rem;
+    font-size: 12px;
 }
 
-.top-nav ul{
+.top-nav ul {
     display: flex;
     gap: 3rem;
 }
 
-.top-nav a{
+.top-nav a {
     text-decoration: none;
     list-style: none;
     color: aliceblue;
@@ -78,3 +79,29 @@
     color: #333;
 }
 
+.form-container {
+    border: 0.5px solid #fffefa;
+    height: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.search-text {
+    background: transparent;
+    border: none;
+    border-radius: 0%;
+    color: white;
+    outline: none;
+    padding-top: 3%;
+    font-size: 15px;
+}
+
+.search-button {
+    color: #fffefa;
+    background-color: black;
+    border-radius: 0%;
+    height: 1rem;
+    padding-top: 3%;
+    font-size: 10px;
+}

@@ -1,5 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import './Navbar.css'
+import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
     return (
@@ -7,8 +8,8 @@ export default function Navbar() {
             <nav className="top-nav">
                 <h3>top-nav</h3>
                 <ul>
-                    <a><CustomLink to="/login">Login / Register</CustomLink></a>
                     <a><CustomLink to="/basket">Basket</CustomLink></a>
+                    <a><CustomLink to="/login">Login / Register</CustomLink></a>
                 </ul>
             </nav>
             <nav className="nav-container">
@@ -18,7 +19,11 @@ export default function Navbar() {
                 <ul>
                     <CustomLink to="/about">Rólunk</CustomLink>
                 </ul>
-                <input type="text"/>
+                <form className="form-container">
+                    <input type="text" className="search-text"/> 
+                    <button type="submit" className="search-button"> <FaSearch /> </button>
+                </form>
+                
             </nav>
         </header>
         

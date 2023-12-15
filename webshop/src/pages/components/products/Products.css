@@ -1,3 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    margin: 1rem;
+    text-align: center;
+}
+
 .section-products {
     display: flex;
     gap: 2rem;
