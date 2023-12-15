@@ -3,7 +3,7 @@
 }
 
 .nav-container {
-    color: black;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -35,11 +35,11 @@
 }
 
 .nav-container li.active {
-    border-bottom: 2px black solid;
+    border-bottom: 2px white solid;
 }
 
 .nav-container li:hover {
-    border-bottom: 3px black solid;
+    border-bottom: 3px white solid;
 }
 
 .all-form {
