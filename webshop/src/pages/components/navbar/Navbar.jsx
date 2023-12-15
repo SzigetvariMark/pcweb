@@ -18,6 +18,7 @@ export default function Navbar() {
                 <ul>
                     <CustomLink to="/about">Rólunk</CustomLink>
                 </ul>
+                <input type="text"/>
             </nav>
         </header>
         

@@ -71,5 +71,10 @@
     text-decoration: none;
     list-style: none;
     color: aliceblue;
+    cursor: pointer;
+}
+
+.top-nav a:hover {
+    color: #333;
 }
 
