@@ -2,16 +2,27 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import './Navbar.css'
 
 export default function Navbar() {
-    return <nav className="nav">
-        <Link to="/Home" className="site-title">
-            <img src="img/image3.png.png" alt="kep" className="title-img"></img>
-        </Link>
-        <ul>
-            <CustomLink to="/products">Termékek</CustomLink>
-            <CustomLink to="/about">Rólunk</CustomLink>
-            <CustomLink to="/login">Bejelentkezés / Regisztráció</CustomLink>
-        </ul>
-    </nav>
+    return (
+        <header className="header">
+            <nav className="top-nav">
+                <h3>top-nav</h3>
+                <ul>
+                    <a><CustomLink to="/login">Bejelentkezés / Regisztráció</CustomLink></a>
+                    <a><CustomLink to="/basket">Cart</CustomLink></a>
+                </ul>
+            </nav>
+            <nav className="nav-container">
+                <Link to="/Home" className="site-title">
+                    <img src="img/image3.png.png" alt="kep" className="title-img"></img>
+                </Link>
+                <ul>
+                    <CustomLink to="/about">Rólunk</CustomLink>
+                </ul>
+            </nav>
+        </header>
+        
+    )
+    
 }
 
 function CustomLink({to, children, ...props}) {

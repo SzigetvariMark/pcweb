@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Navbar, Products, Login, Register } from './pages/components'
+import { Navbar, Login, Register, Basket } from './pages/components'
 import Home from './pages/Home'
 import About from './pages/About'
 
@@ -16,11 +16,11 @@ function App() {
       <div className='container'>
           <Routes>
             <Route path='/home' element={<Home />}></Route>
-            <Route path='/products' element={<Products />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/login' element={
               currentForm === "register" ? <Register onFormSwitch={toggleForm} /> : <Login onFormSwitch={toggleForm} />
             }></Route>
+            <Route path='/basket' element={<Basket />}></Route>
           </Routes>
       </div>
     </>
