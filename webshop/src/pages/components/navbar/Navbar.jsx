@@ -18,6 +18,8 @@ export default function Navbar() {
                 </Link>
                 <ul>
                     <CustomLink to="/about">Rólunk</CustomLink>
+                    <CustomLink to="/new_products">Újdonságok</CustomLink>
+                    <CustomLink to="/actions">Akciók</CustomLink>
                 </ul>
                 <form className="form-container">
                     <input type="text" className="search-text"/> 
