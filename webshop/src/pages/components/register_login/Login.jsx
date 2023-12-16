@@ -16,7 +16,7 @@ export default function Login(props) {
                 <label htmlFor="email">Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com"></input>
                 <label htmlFor="password">Jelszó</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="Jelszó" placeholder="***********"></input>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="***********"></input>
                 <button type="submit" className="login-button">
                     <span>Bejelentkezés</span>
                 </button>

@@ -20,6 +20,8 @@ export default function Register(props) {
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com"></input>
                 <label htmlFor="password">Jelszó</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="***********"></input>
+                <label htmlFor="password">Ismételd meg a jelszódat</label>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="***********"></input>
                 <button type="submit" className="register-button">
                     <span>Regisztráció</span>
                 </button>
