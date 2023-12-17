@@ -8,19 +8,19 @@ function Products() {
     <section className='section-products'>
         <div className="product">
             <button className="product-gpu">
-                <label htmlFor="text">GPU</label>
+                <label htmlFor="text" className='label-homepage'>GPU</label>
             </button>
         </div>
 
         <div className="product">
             <button className="product-cpu">
-                <label htmlFor="text">CPU</label>
+                <label htmlFor="text" className='label-homepage'>CPU</label>
             </button>
         </div>
 
         <div className="product">
             <button className="product-ram">
-                <label htmlFor="text">Ram</label>
+                <label htmlFor="text" className='label-homepage'>Ram</label>
             </button>
         </div>
 
@@ -28,20 +28,20 @@ function Products() {
 
     <section className='section-products-second'>
         <div className="product">
-            <button className="product-gpu">
-                <label htmlFor="text">GPU</label>
+            <button className="product-mtb">
+                <label htmlFor="text" className='label-homepage'>MoBo</label>
             </button>
         </div>
 
         <div className="product">
             <button className="product-cpu">
-                <label htmlFor="text">CPU</label>
+                <label htmlFor="text" className='label-homepage'>CPU</label>
             </button>
         </div>
 
         <div className="product">
             <button className="product-ram">
-                <label htmlFor="text">Ram</label>
+                <label htmlFor="text" className='label-homepage'>Ram</label>
             </button>
         </div>
 
