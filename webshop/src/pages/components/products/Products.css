@@ -47,9 +47,17 @@
     height: 19rem;
 }
 
-.product-powers {
+.product-psu {
     border-radius: 0%;
     background-image: url(/img/power.jpg);
+    background-size: cover;
+    width: 28rem;
+    height: 19rem;
+}
+
+.product-case {
+    border-radius: 0%;
+    background-image: url(/img/case.avif);
     background-size: cover;
     width: 28rem;
     height: 19rem;

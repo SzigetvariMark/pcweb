@@ -34,14 +34,14 @@ function Products() {
         </div>
 
         <div className="product">
-            <button className="product-powers">
+            <button className="product-psu">
                 <label htmlFor="text" className='label-homepage'>PSU</label>
             </button>
         </div>
 
         <div className="product">
-            <button className="product-ram">
-                <label htmlFor="text" className='label-homepage'>Ram</label>
+            <button className="product-case">
+                <label htmlFor="text" className='label-homepage'>case</label>
             </button>
         </div>
 
