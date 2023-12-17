@@ -16,6 +16,12 @@ function Products() {
             </button>
         </div>
 
+        <div className="product">
+            <button className="product-ram">
+                <label htmlFor="text">Ram</label>
+            </button>
+        </div>
+
     </section>
   )
 }
