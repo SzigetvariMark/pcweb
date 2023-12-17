@@ -8,9 +8,17 @@
     border: 3px wheat solid;
 }
 
-.product-info {
+.product-gpu {
     border-radius: 0%;
     background-image: url(/img/gpu.avif);
+    background-size: cover;
+    width: 28rem;
+    height: 19rem;
+}
+
+.product-cpu {
+    border-radius: 0%;
+    background-image: url(/img/cpu.avif);
     background-size: cover;
     width: 28rem;
     height: 19rem;
