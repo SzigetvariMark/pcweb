@@ -47,6 +47,14 @@
     height: 19rem;
 }
 
+.product-powers {
+    border-radius: 0%;
+    background-image: url(/img/power.jpg);
+    background-size: cover;
+    width: 28rem;
+    height: 19rem;
+}
+
 .label-homepage {
     font-size: 50px;
     margin-right: 16rem;

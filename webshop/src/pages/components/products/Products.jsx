@@ -34,8 +34,8 @@ function Products() {
         </div>
 
         <div className="product">
-            <button className="product-cpu">
-                <label htmlFor="text" className='label-homepage'>CPU</label>
+            <button className="product-powers">
+                <label htmlFor="text" className='label-homepage'>PSU</label>
             </button>
         </div>
 
