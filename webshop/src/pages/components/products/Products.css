@@ -1,20 +1,22 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    overflow: hidden;
-}
-
-.container {
-    margin: 1rem;
-    text-align: center;
-}
-
 .section-products {
     display: flex;
     gap: 2rem;
+    justify-content: center;
+}
+
+.product {
+    border: 3px wheat solid;
+}
+
+.product-info {
+    border-radius: 0%;
+    background-image: url(/img/gpu.avif);
+    background-size: cover;
+    width: 28rem;
+    height: 19rem;
+}
+
+label {
+    font-size: 50px;
+    margin-right: 16rem;
 }
