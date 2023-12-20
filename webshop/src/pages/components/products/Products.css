@@ -17,7 +17,7 @@
 
 .product-gpu {
     border-radius: 0%;
-    background-image: url(/img/gpu.avif);
+    background-image: url(/img/cpu1.jpg);
     background-size: cover;
     width: 28rem;
     height: 19rem;
@@ -25,7 +25,7 @@
 
 .product-cpu {
     border-radius: 0%;
-    background-image: url(/img/cpu.avif);
+    background-image: url(/img/cpu1.jpg);
     background-size: cover;
     width: 28rem;
     height: 19rem;
