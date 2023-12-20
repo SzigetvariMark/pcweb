@@ -18,7 +18,7 @@ export default function Navbar() {
             </nav>
             <nav className="nav-container">
                 <Link to="/Home" className="site-title">
-                    <img src="img/image3.png.png" alt="kep" className="title-img"></img>
+                    <img src="img/logonew.png" alt="kep" className="title-img"></img>
                 </Link>
                 <ul>
                     <CustomLink to="/about">Rólunk</CustomLink>
