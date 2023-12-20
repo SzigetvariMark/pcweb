@@ -12,8 +12,8 @@ export default function Navbar() {
                 </div>
         
                 <ul>
-                    <a><CustomLink to="/basket">Basket</CustomLink></a>
-                    <a><CustomLink to="/login">Login / Register</CustomLink></a>
+                    <a><CustomLink to="/basket">Kosár</CustomLink></a>
+                    <a><CustomLink to="/login">Bejelentkezés / Regisztráció</CustomLink></a>
                 </ul>
             </nav>
             <nav className="nav-container">
