@@ -14,8 +14,11 @@ export default function Register(props) {
         <div className="all-form">
             <div className="auth-form-container">
             <form className="register-form" onSubmit={ handleSubmit }>
-                <label htmlFor="name">Felhasználónév</label>
-                <input value={name} name="name" id="name" placeholder="Felhasználónév" ></input>
+                    <label htmlFor="name">Vezetéknév</label>
+                    <input value={name} name="name" id="name" placeholder="Vezetéknév" ></input>
+                    <label htmlFor="name">Keresztnév</label>
+                    <input value={name} name="name" id="name" placeholder="Keresztnév" ></input>
+                
                 <label htmlFor="email">Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com"></input>
                 <label htmlFor="password">Jelszó</label>
