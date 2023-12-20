@@ -6,8 +6,11 @@ export default function Navbar() {
     return (
         <header className="header">
             <nav className="top-nav">
-                <input type="submit" className="hun" value=" "/>
-                <input type="submit" className="eng" value=" "/>
+                <div className="top-nav-div">
+                    <input type="submit" className="hun" value=" "/>
+                    <input type="submit" className="eng" value=" "/>  
+                </div>
+        
                 <ul>
                     <a><CustomLink to="/basket">Basket</CustomLink></a>
                     <a><CustomLink to="/login">Login / Register</CustomLink></a>

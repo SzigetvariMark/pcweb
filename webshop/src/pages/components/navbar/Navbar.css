@@ -117,3 +117,19 @@
     height: 2rem;
 }
 
+.eng {
+    background-image: url(/img/eng.jpg);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 60%;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+.top-nav-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
