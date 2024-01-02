@@ -10,7 +10,7 @@ function Head() {
     <header className="head">
       <input
         type="button"
-        value="Ingyenes szállítás minden megrendelésre Korlátozott idejű ajánlat"
+        value="Ingyenes szállítás minden megrendelésre"
         className="head--input"
       />
       <input

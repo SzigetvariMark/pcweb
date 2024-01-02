@@ -11,6 +11,8 @@ body {
     overflow: hidden;
     background-color: black;
     color: white;
+    padding: 0rem 20rem;
+    align-items: center;
 }
 
 .container {
