@@ -1,0 +1,12 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head--input {
+    padding: 1rem;
+    color: #ADFFA2;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}

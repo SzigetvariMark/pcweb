@@ -33,7 +33,7 @@
 
 .product-ram {
     border-radius: 0%;
-    background-image: url(/img/ram.avif);
+    background-image: url(/img/ram.jpg);
     background-size: cover;
     width: 28rem;
     height: 19rem;
@@ -57,7 +57,7 @@
 
 .product-case {
     border-radius: 0%;
-    background-image: url(/img/case.avif);
+    background-image: url(/img/case.jpg);
     background-size: cover;
     width: 28rem;
     height: 19rem;

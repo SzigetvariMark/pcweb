@@ -5,28 +5,18 @@
     flex-direction: column;
 }
 
-label {
+.label--reglog {
     text-align: left;
     padding: 0.25rem 0;
     color: #ba9a5b;
 }
 
-input {
+.input--reglog {
     font-size: 18px;
     margin: 0.25rem 0;
     padding: 1rem;
     border-radius: 10px;
     color: #ba9a5b;
-}
-
-button {
-    font-size: 18px;
-    text-transform: uppercase;
-    border: none;
-    color: #ba9a5b;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .login-button,
@@ -36,6 +26,12 @@ button {
     outline: none;
     transition: 0.5s ease-in-out;
     margin-top: 14px;
+    color: #ba9a5b;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px;
 }
 
 .login-button:hover,
@@ -52,6 +48,8 @@ button {
     text-decoration: underline;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    border: none;
+    padding: 20px;
 }
 
 .link-button:hover {
@@ -59,7 +57,7 @@ button {
 }
 
 .register-form {
-    height: 39rem;
+    height: 40rem;
     width: 25rem;
     border: 3px #ba9a5b solid;
     padding: 15px;
