@@ -51,34 +51,6 @@
     border: #333;
 }
 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ba9a5b;
-    align-items: center;
-    padding-right: 18%;
-    padding-left: 18%;
-    color: aliceblue;
-    height: 2.5rem;
-    font-size: 12px;
-}
-
-.top-nav ul {
-    display: flex;
-    gap: 3rem;
-}
-
-.top-nav a {
-    text-decoration: none;
-    list-style: none;
-    color: aliceblue;
-    cursor: pointer;
-}
-
-.top-nav a:hover {
-    color: #333;
-}
-
 .form-container {
     border: 0.5px solid #fffefa;
     height: 2rem;
@@ -132,4 +104,12 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+
+.user--image {
+    height: 26px;
+}
+
+.log--reg {
+    font-size: 14px;
 }

@@ -1,28 +1,14 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./Navbar.css";
 import { FaSearch } from "react-icons/fa";
+import user_image from "/public/img/person-outline.png";
 
 export default function Navbar() {
   return (
     <nav className="header">
-      <nav className="top-nav">
-        <div className="top-nav-div">
-          <input type="submit" className="hun" value=" " />
-          <input type="submit" className="eng" value=" " />
-        </div>
-
-        <ul>
-          <a>
-            <CustomLink to="/basket">Kosár</CustomLink>
-          </a>
-          <a>
-            <CustomLink to="/login">Bejelentkezés / Regisztráció</CustomLink>
-          </a>
-        </ul>
-      </nav>
       <nav className="nav-container">
         <Link to="/" className="site-title">
-          <img src="img/logonew.png" alt="kep" className="title-img"></img>
+          <img src="img/lgo.jpeg" alt="kep" className="title-img"></img>
         </Link>
         <ul>
           <CustomLink to="/about">Rólunk</CustomLink>
@@ -36,6 +22,21 @@ export default function Navbar() {
             <FaSearch />{" "}
           </button>
         </form>
+        <div className="top-nav-div">
+          <input type="submit" className="hun" value=" " />
+          <input type="submit" className="eng" value=" " />
+        </div>
+        <ul>
+          <a>
+            <CustomLink to="/basket">Kosár</CustomLink>
+          </a>
+          <a>
+            <CustomLink to="/login" className="log--reg">
+              <img src={user_image} alt="user" className="user--image" />
+              Kosár
+            </CustomLink>
+          </a>
+        </ul>
       </nav>
     </nav>
   );
