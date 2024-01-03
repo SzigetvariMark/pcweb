@@ -4,7 +4,7 @@ import "./Actions.css";
 function Actions() {
   return (
     <div className="nav--image--container">
-      <button className="nav--image--button">
+      <button type="button" className="nav--image--button">
         <img src="/img/akcio.jpg" alt="kep" className="nav--image" />
       </button>
     </div>

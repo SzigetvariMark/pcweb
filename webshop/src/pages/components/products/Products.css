@@ -1,3 +1,7 @@
+.producst--main {
+    background-color: white;
+}
+
 .section-products {
     display: flex;
     gap: 2rem;

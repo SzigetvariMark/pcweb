@@ -3,7 +3,8 @@ import "./Products.css";
 
 function Products() {
   return (
-    <>
+    <main className="producst--main">
+      <h1>Üdvözlet a PC Webshop Weboldalán!</h1>
       <section className="section-products">
         <div className="product">
           <button className="product-gpu">
@@ -55,7 +56,7 @@ function Products() {
           </button>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 
