@@ -9,10 +9,8 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-color: black;
-    color: white;
-    padding: 0rem 20rem;
-    align-items: center;
+    background-color: white;
+    color: black;
 }
 
 .container {

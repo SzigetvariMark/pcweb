@@ -6,7 +6,7 @@ function Products() {
     <>
       <section className="section-products">
         <div className="product">
-          <button className="product-gpus">
+          <button className="product-gpu">
             <label htmlFor="text" className="label-homepage">
               GPU
             </label>
