@@ -2,6 +2,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
+    background-color: #013285;
 }
 
 .nav-container {
@@ -53,7 +54,7 @@
 }
 
 .form-container {
-    border: 0.5px solid black;
+    border: 0.5px solid white;
     border-radius: 10px;
     height: 2rem;
     margin-top: 1rem;

@@ -1,10 +1,14 @@
-import React from 'react'
-import "./Actions.css"
+import React from "react";
+import "./Actions.css";
 
 function Actions() {
   return (
-    <div>Actions</div>
-  )
+    <div className="nav--image--container">
+      <button className="nav--image--button">
+        <img src="/img/akcio.jpg" alt="kep" className="nav--image" />
+      </button>
+    </div>
+  );
 }
 
-export default Actions
+export default Actions;

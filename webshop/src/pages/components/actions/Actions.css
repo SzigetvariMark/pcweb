@@ -1,0 +1,14 @@
+.nav--image--container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav--image--button {
+    border: none;
+    cursor: pointer;
+    background-color: #013285;
+}
+
+.nav--image {
+    height: 21rem;
+}
