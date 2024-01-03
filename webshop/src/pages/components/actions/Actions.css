@@ -1,6 +1,7 @@
 .nav--image--container {
     display: flex;
     justify-content: center;
+    background-color: #013285;
 }
 
 .nav--image--button {
