@@ -7,53 +7,29 @@ function Products() {
       <h1>Üdvözlet a PC Webshop Weboldalán!</h1>
       <section className="section-products">
         <div className="product">
-          <button className="product-gpu">
-            <label htmlFor="text" className="label-homepage">
-              GPU
-            </label>
-          </button>
+          <input type="button" className="product-gpu" value="GPU" />
         </div>
 
         <div className="product">
-          <button className="product-cpu">
-            <label htmlFor="text" className="label-homepage">
-              CPU
-            </label>
-          </button>
+          <input type="button" className="product-cpu" value="CPU" />
         </div>
 
         <div className="product">
-          <button className="product-ram">
-            <label htmlFor="text" className="label-homepage">
-              RAM
-            </label>
-          </button>
+          <input type="button" className="product-ram" value="RAM" />
         </div>
       </section>
 
       <section className="section-products-second">
         <div className="product">
-          <button className="product-mtb">
-            <label htmlFor="text" className="label-homepage">
-              MOBO
-            </label>
-          </button>
+          <input type="button" className="product-mtb" value="MOBO" />
         </div>
 
         <div className="product">
-          <button className="product-psu">
-            <label htmlFor="text" className="label-homepage">
-              PSU
-            </label>
-          </button>
+          <input type="button" className="product-psu" value="PSU" />
         </div>
 
         <div className="product">
-          <button className="product-case">
-            <label htmlFor="text" className="label-homepage">
-              CASE
-            </label>
-          </button>
+          <input type="button" className="product-case" value="CASE" />
         </div>
       </section>
     </main>

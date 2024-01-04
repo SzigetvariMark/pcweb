@@ -17,19 +17,8 @@
 }
 
 .product {
-    border: 2px black solid;
+    border: none;
     border-radius: 15px;
-}
-
-.product-gpu {
-    border-radius: 0%;
-    background-image: url(/img/gpu.jpg);
-    background-size: cover;
-    border-radius: 15px;
-    width: 28rem;
-    height: 19rem;
-    cursor: pointer;
-    transition: 0.7s;
 }
 
 .product-gpu:hover,
@@ -39,65 +28,84 @@
 .product-psu:hover,
 .product-case:hover {
     filter: brightness(50%);
+    color: red;
+    font-size: 6rem;
+}
+
+.product-gpu {
+    background-image: url(/img/gpu.jpg);
+    background-size: cover;
+    border: none;
+    border-radius: 15px;
+    width: 28rem;
+    height: 19rem;
+    cursor: pointer;
+    transition: 0.7s;
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 .product-cpu {
-    border-radius: 0%;
     background-image: url(/img/cpu1.jpg);
     background-size: cover;
+    border: none;
     border-radius: 15px;
     width: 28rem;
     height: 19rem;
     cursor: pointer;
     transition: 0.7s;
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 .product-ram {
-    border-radius: 0%;
     background-image: url(/img/ram.jpg);
     background-size: cover;
+    border: none;
     border-radius: 15px;
     width: 28rem;
     height: 19rem;
     cursor: pointer;
     transition: 0.7s;
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 .product-mtb {
-    border-radius: 0%;
     background-image: url(/img/mth.jpg);
     background-size: cover;
+    border: none;
     border-radius: 15px;
     width: 28rem;
     height: 19rem;
     cursor: pointer;
     transition: 0.7s;
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 .product-psu {
-    border-radius: 0%;
     background-image: url(/img/power.jpg);
     background-size: cover;
+    border: none;
     border-radius: 15px;
     width: 28rem;
     height: 19rem;
     cursor: pointer;
     transition: 0.7s;
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 .product-case {
-    border-radius: 0%;
     background-image: url(/img/case.jpg);
     background-size: cover;
+    border: none;
     border-radius: 15px;
     width: 28rem;
     height: 19rem;
     cursor: pointer;
     transition: 0.7s;
-}
-
-.label-homepage {
-    color: white;
-    font-size: 50px;
-    margin-right: 16rem;
+    color: aliceblue;
+    font-size: 3rem;
 }
