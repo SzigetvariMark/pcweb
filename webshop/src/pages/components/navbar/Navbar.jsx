@@ -1,7 +1,7 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./Navbar.css";
 import { FaSearch } from "react-icons/fa";
-import user_image from "/public/img/person-outline.png";
+import user_image from "/img/person-outline.png";
 
 export default function Navbar() {
   return (
