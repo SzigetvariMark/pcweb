@@ -25,7 +25,7 @@ function Products() {
         <div className="product">
           <button className="product-ram">
             <label htmlFor="text" className="label-homepage">
-              Ram
+              RAM
             </label>
           </button>
         </div>
@@ -35,7 +35,7 @@ function Products() {
         <div className="product">
           <button className="product-mtb">
             <label htmlFor="text" className="label-homepage">
-              MoBo
+              MOBO
             </label>
           </button>
         </div>
@@ -51,7 +51,7 @@ function Products() {
         <div className="product">
           <button className="product-case">
             <label htmlFor="text" className="label-homepage">
-              case
+              CASE
             </label>
           </button>
         </div>
