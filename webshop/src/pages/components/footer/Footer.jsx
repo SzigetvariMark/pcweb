@@ -94,7 +94,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="footer-link"
             >
-              Temu vásárlásvédelem
+              Vásárlásvédelem
             </a>
           </li>
           <li className="footer--li">
@@ -104,7 +104,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="footer-link"
             >
-              Együttműködés a Temuval
+              Együttműködés velünk
             </a>
           </li>
         </ul>

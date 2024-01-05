@@ -3,6 +3,7 @@
     background-color: rgb(34, 33, 33);
     border-radius: 0px 0px 11px 11px;
     display: flex;
+    justify-content: center;
     gap: 4rem;
 }
 
