@@ -1,5 +1,10 @@
-.producst--main {
+.products--main {
     background-color: whitesmoke;
+}
+
+.products--title {
+    color: cadetblue;
+    padding: 2rem;
 }
 
 .section-products {

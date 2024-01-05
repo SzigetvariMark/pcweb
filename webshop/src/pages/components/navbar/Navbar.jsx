@@ -20,7 +20,11 @@ export default function Navbar() {
             {" "}
             <FaSearch />{" "}
           </button>
-          <input type="text" className="search-text"></input>
+          <input
+            type="text"
+            className="search-text"
+            placeholder="videókártya"
+          ></input>
         </form>
         <div className="top-nav-div">
           <input type="submit" className="hun" value=" " />
