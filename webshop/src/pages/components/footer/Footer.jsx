@@ -7,9 +7,36 @@ function Footer() {
       <div className="footer--div">
         <h3>Céginformáció</h3>
         <ul className="footer--ul">
-          <li>A webshopról</li>
-          <li>Lépjen velünk kapcsdolatba</li>
-          <li>Sajtó</li>
+          <li className="footer--li">
+            <a
+              href="//"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              A webshopról
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Lépjen velünk kapcsdolatba
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Sajtó
+            </a>
+          </li>
         </ul>
       </div>
       <div className="footer--div">

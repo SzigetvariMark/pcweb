@@ -7,10 +7,26 @@
 }
 
 .footer--div {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    text-align: left;
 }
 
 .footer--ul {
-    gap: 4rem;
     list-style: none;
+    padding-top: 11px
+}
+
+.footer--li {
+    text-align: left;
+    width: 14.3rem;
+}
+
+.footer-link {
+    color: aliceblue;
+    text-decoration: none;
+    filter: brightness(60%);
+}
+
+.footer-link:hover {
+    filter: brightness(80%);
 }
