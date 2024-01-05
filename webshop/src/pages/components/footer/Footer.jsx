@@ -4,15 +4,46 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer--container">
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
-      <h3>valami</h3>
+      <div className="footer--div">
+        <h3>Céginformáció</h3>
+        <ul className="footer--ul">
+          <li>A webshopról</li>
+          <li>Lépjen velünk kapcsdolatba</li>
+          <li>Sajtó</li>
+        </ul>
+      </div>
+      <div className="footer--div">
+        <h3>Céginformáció</h3>
+        <ul className="footer--ul">
+          <li>A webshopról</li>
+          <li>Lépjen velünk kapcsdolatba</li>
+          <li>Sajtó</li>
+        </ul>
+      </div>
+      <div className="footer--div">
+        <h3>Céginformáció</h3>
+        <ul className="footer--ul">
+          <li>A webshopról</li>
+          <li>Lépjen velünk kapcsdolatba</li>
+          <li>Sajtó</li>
+        </ul>
+      </div>
+      <div className="footer--div">
+        <h3>Céginformáció</h3>
+        <ul className="footer--ul">
+          <li>A webshopról</li>
+          <li>Lépjen velünk kapcsdolatba</li>
+          <li>Sajtó</li>
+        </ul>
+      </div>
+      <div className="footer--div">
+        <h3>Céginformáció</h3>
+        <ul className="footer--ul">
+          <li>A webshopról</li>
+          <li>Lépjen velünk kapcsdolatba</li>
+          <li>Sajtó</li>
+        </ul>
+      </div>
     </div>
   );
 }
