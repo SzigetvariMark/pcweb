@@ -69,8 +69,8 @@
 .form-container {
     border: none;
     border-radius: 10px;
-    height: 2rem;
-    margin-top: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .search-text {
@@ -80,14 +80,21 @@
     border-radius: 16px;
     color: black;
     font-size: 0.9rem;
+    height: 2rem;
+    width: 15.5rem;
     outline: none;
-    text-indent: 8px;
+    text-indent: 11px;
 }
 
 .search-button {
     color: #fffefa;
     background-color: black;
-    border-radius: 16px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    margin: 13.6rem;
 }
 
 .hun {

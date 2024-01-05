@@ -16,11 +16,11 @@ export default function Navbar() {
           <CustomLink to="/actions">Akciók</CustomLink>
         </ul>
         <form className="form-container">
-          <input type="text" className="search-text"></input>
           <button type="submit" className="search-button">
             {" "}
             <FaSearch />{" "}
           </button>
+          <input type="text" className="search-text"></input>
         </form>
         <div className="top-nav-div">
           <input type="submit" className="hun" value=" " />
