@@ -1,5 +1,6 @@
 .products--main {
     background-color: whitesmoke;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .products--title {
