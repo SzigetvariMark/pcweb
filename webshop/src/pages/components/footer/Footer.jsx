@@ -75,15 +75,42 @@ function Footer() {
         </ul>
       </div>
       <div className="footer--div">
-        <h3>Céginformáció</h3>
+        <h3>Súgó</h3>
         <ul className="footer--ul">
-          <li>A webshopról</li>
-          <li>Lépjen velünk kapcsdolatba</li>
-          <li>Sajtó</li>
+          <li className="footer--li">
+            <a
+              href="//"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Ügyfélszolgálat és GYIK
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Temu vásárlásvédelem
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Együttműködés a Temuval
+            </a>
+          </li>
         </ul>
       </div>
       <div className="footer--div">
-        <h3>Céginformáció</h3>
+        <h3>Elérhetőségeink</h3>
         <ul className="footer--ul">
           <li>A webshopról</li>
           <li>Lépjen velünk kapcsdolatba</li>
