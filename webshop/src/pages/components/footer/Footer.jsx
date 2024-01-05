@@ -40,19 +40,38 @@ function Footer() {
         </ul>
       </div>
       <div className="footer--div">
-        <h3>Céginformáció</h3>
+        <h3>Ügyfélszolgálat</h3>
         <ul className="footer--ul">
-          <li>A webshopról</li>
-          <li>Lépjen velünk kapcsdolatba</li>
-          <li>Sajtó</li>
-        </ul>
-      </div>
-      <div className="footer--div">
-        <h3>Céginformáció</h3>
-        <ul className="footer--ul">
-          <li>A webshopról</li>
-          <li>Lépjen velünk kapcsdolatba</li>
-          <li>Sajtó</li>
+          <li className="footer--li">
+            <a
+              href="//"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Visszaküldési és visszatérítési szabályzat
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Szellemi tulajdonra vonatkozó szabályzat
+            </a>
+          </li>
+          <li className="footer--li">
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Szállítási információk
+            </a>
+          </li>
         </ul>
       </div>
       <div className="footer--div">
