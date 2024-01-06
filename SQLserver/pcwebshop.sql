@@ -77,3 +77,6 @@ ALTER TABLE `shoppingcart`
 
 ALTER TABLE `customers`
   MODIFY `CustomerID` int(20) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `orders`
+  MODIFY `OrderID` int(20) NOT NULL AUTO_INCREMENT;
