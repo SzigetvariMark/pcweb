@@ -31,4 +31,5 @@ CREATE TABLE `products` (
   `Quantity in stock` int(3) NOT NULL,
   `Manufacturer` varchar(40) NOT NULL,
   `Specifications` varchar(250) NOT NULL COMMENT 'CPU, GPU etc..',
+  `Images` blob NOT NULL
 )
