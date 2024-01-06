@@ -9,4 +9,6 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `orders` (
-    `OrderID` int(20) NOT NULL,)
+    `OrderID` int(20) NOT NULL,
+    `OrderCustomerID` int(20) DEFAULT NULL,
+    )
