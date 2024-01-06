@@ -3,4 +3,8 @@ CREATE TABLE `customers` (
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) NOT NULL,
   `UserName` varchar(250) NOT NULL,
-  )
+  `Email` varchar(255) NOT NULL,
+  `PasswordHash` binary(64) NOT NULL,
+  `PhoneNum` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+  
