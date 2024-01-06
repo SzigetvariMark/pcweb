@@ -39,4 +39,5 @@ CREATE TABLE `reviews` (
   `ReviewProductID` int(20) NOT NULL,
   `ReviewCustomerID` int(20) NOT NULL,
   `Rating` double NOT NULL,
+  `ReviewText` text DEFAULT NULL,
   )
