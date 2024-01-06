@@ -11,4 +11,5 @@ CREATE TABLE `customers` (
 CREATE TABLE `orders` (
     `OrderID` int(20) NOT NULL,
     `OrderCustomerID` int(20) DEFAULT NULL,
+    `OrderProductID` int(20) DEFAULT NULL,
     )
