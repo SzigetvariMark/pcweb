@@ -33,3 +33,6 @@ CREATE TABLE `products` (
   `Specifications` varchar(250) NOT NULL COMMENT 'CPU, GPU etc..',
   `Images` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+CREATE TABLE `reviews` (
+  `ReviewID` int(11) NOT NULL,)
