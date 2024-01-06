@@ -42,3 +42,6 @@ CREATE TABLE `reviews` (
   `ReviewText` text DEFAULT NULL,
   `ReviewDate` date NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+CREATE TABLE `shoppingcart` (
+  `CartCustomerID` int(20) NOT NULL,)
