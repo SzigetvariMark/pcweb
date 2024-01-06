@@ -29,4 +29,5 @@ CREATE TABLE `products` (
   `Description` varchar(255) NOT NULL,
   `Price` varchar(10) DEFAULT NULL,
   `Quantity in stock` int(3) NOT NULL,
+  `Manufacturer` varchar(40) NOT NULL,
 )
