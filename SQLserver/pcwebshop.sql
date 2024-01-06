@@ -7,4 +7,6 @@ CREATE TABLE `customers` (
   `PasswordHash` binary(64) NOT NULL,
   `PhoneNum` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-  
+
+CREATE TABLE `orders` (
+    `OrderID` int(20) NOT NULL,)
