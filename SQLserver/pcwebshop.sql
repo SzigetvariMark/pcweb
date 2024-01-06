@@ -13,4 +13,5 @@ CREATE TABLE `orders` (
     `OrderCustomerID` int(20) DEFAULT NULL,
     `OrderProductID` int(20) DEFAULT NULL,
     `Quantity` int(2) DEFAULT NULL,
+    `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     )
