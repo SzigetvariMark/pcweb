@@ -41,4 +41,4 @@ CREATE TABLE `reviews` (
   `Rating` double NOT NULL,
   `ReviewText` text DEFAULT NULL,
   `ReviewDate` date NOT NULL
-  )
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
