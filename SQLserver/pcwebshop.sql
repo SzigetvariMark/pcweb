@@ -16,3 +16,8 @@ CREATE TABLE `orders` (
     `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     `TotalCost` varchar(250) NOT NULL,
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+CREATE TABLE `payments` (
+  `PaymentID` int(11) NOT NULL,
+  
+  )
