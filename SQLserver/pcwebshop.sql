@@ -52,3 +52,8 @@ CREATE TABLE `shoppingcart` (
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`CustomerID`),
   ADD UNIQUE KEY `customers_pk2` (`Email`);
+
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`OrderID`),
+  ADD KEY `Orders_customers_CustomerID_fk` (`OrderCustomerID`),
+  ADD KEY `orders_products_ProductID_fk` (`OrderProductID`);
