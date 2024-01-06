@@ -47,4 +47,4 @@ CREATE TABLE `shoppingcart` (
   `CartCustomerID` int(20) NOT NULL,
   `CartProductID` int(20) NOT NULL,
   `Quantity` int(2) DEFAULT NULL
-  )
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
