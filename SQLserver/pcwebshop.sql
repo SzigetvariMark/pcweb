@@ -21,4 +21,4 @@ CREATE TABLE `payments` (
   `PaymentID` int(11) NOT NULL,
   `OrderIDFk` int(20) DEFAULT NULL,
   `PaymentMethod` varchar(50) NOT NULL
-  )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
