@@ -14,4 +14,5 @@ CREATE TABLE `orders` (
     `OrderProductID` int(20) DEFAULT NULL,
     `Quantity` int(2) DEFAULT NULL,
     `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `TotalCost` varchar(250) NOT NULL,
     )
