@@ -27,4 +27,5 @@ CREATE TABLE `products` (
   `ProductID` int(20) NOT NULL,
   `ProductName` varchar(255) NOT NULL,
   `Description` varchar(255) NOT NULL,
+  `Price` varchar(10) DEFAULT NULL,
 )
