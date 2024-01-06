@@ -90,3 +90,6 @@ ALTER TABLE `products`
 ALTER TABLE `orders`
   ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`OrderCustomerID`) REFERENCES `customers` (`CustomerID`),
   ADD CONSTRAINT `orders_products_ProductID_fk` FOREIGN KEY (`OrderProductID`) REFERENCES `products` (`ProductID`);
+
+ALTER TABLE `payments`
+  ADD CONSTRAINT `Payments_orders_OrderID_fk` FOREIGN KEY (`OrderIDFk`) REFERENCES `orders` (`OrderID`);
