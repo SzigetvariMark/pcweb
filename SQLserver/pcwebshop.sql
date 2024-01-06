@@ -83,3 +83,6 @@ ALTER TABLE `orders`
 
 ALTER TABLE `payments`
   MODIFY `PaymentID` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `products`
+  MODIFY `ProductID` int(20) NOT NULL AUTO_INCREMENT;  
