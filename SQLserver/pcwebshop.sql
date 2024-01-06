@@ -70,3 +70,7 @@ ALTER TABLE `reviews`
   ADD PRIMARY KEY (`ReviewID`),
   ADD KEY `Reviews_customers_CustomerID_fk` (`ReviewCustomerID`),
   ADD KEY `Reviews_products_ProductID_fk` (`ReviewProductID`);
+
+ALTER TABLE `shoppingcart`
+  ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CartCustomerID`),
+  ADD KEY `shoppingcart_products_ProductID_fk` (`CartProductID`);
