@@ -35,4 +35,6 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `reviews` (
-  `ReviewID` int(11) NOT NULL,)
+  `ReviewID` int(11) NOT NULL,
+  `ReviewProductID` int(20) NOT NULL,
+  )
