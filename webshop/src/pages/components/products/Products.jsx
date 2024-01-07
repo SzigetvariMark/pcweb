@@ -1,3 +1,4 @@
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import React from "react";
 import "./Products.css";
 
@@ -7,7 +8,9 @@ function Products() {
       <h1 className="products--title">Kategóriák</h1>
       <section className="section-products">
         <div className="product">
-          <input type="button" className="product-gpu" value="GPU" />
+          <Link to="/actions">
+            <input type="button" className="product-gpu" value="GPU"></input>
+          </Link>
         </div>
 
         <div className="product">
