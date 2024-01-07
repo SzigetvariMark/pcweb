@@ -10,7 +10,7 @@ export default function Register(props) {
     e.preventDefault();
     console.log(email);
   };
-  return (
+  return props.trigger ? (
     <div className="all-form">
       <div className="auth-form-container">
         <form className="register-form" onSubmit={handleSubmit}>
@@ -77,5 +77,7 @@ export default function Register(props) {
         </button>
       </div>
     </div>
+  ) : (
+    ""
   );
 }

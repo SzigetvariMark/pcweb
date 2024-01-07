@@ -9,7 +9,7 @@ export default function Login(props) {
     e.preventDefault();
     console.log(email);
   };
-  return (
+  return props.trigger ? (
     <div className="all-form">
       <div className="auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
@@ -45,5 +45,7 @@ export default function Login(props) {
         </button>
       </div>
     </div>
+  ) : (
+    ""
   );
 }

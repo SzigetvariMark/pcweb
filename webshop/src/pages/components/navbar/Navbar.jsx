@@ -1,5 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./Navbar.css";
+import Login from "../register_login/Login";
 import { FaSearch } from "react-icons/fa";
 import user_image from "/img/person-outline.png";
 
@@ -35,10 +36,10 @@ export default function Navbar() {
             <CustomLink to="/basket">Kosár</CustomLink>
           </a>
           <a>
-            <CustomLink to="/login" className="log--reg">
+            <button>
               <img src={user_image} alt="user" className="user--image" />
-              Kosár
-            </CustomLink>
+            </button>
+            <Login trigger={true} className="log--reg"></Login>
           </a>
         </ul>
       </nav>
