@@ -55,9 +55,9 @@ ALTER TABLE `customers`
   ADD UNIQUE KEY `customers_pk2` (`Email`);
 
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`OrderID`),
-  ADD KEY `Orders_customers_CustomerID_fk` (`OrderCustomerID`),
-  ADD KEY `orders_products_ProductID_fk` (`OrderProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Orders_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `orders_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`PaymentID`),
