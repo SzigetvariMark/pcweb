@@ -100,8 +100,8 @@ ALTER TABLE `payments`
   ADD CONSTRAINT `Payments_orders_OrderID_fk` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`ID`);
 
 ALTER TABLE `reviews`
-  ADD CONSTRAINT `Reviews_customers_CustomerID_fk` FOREIGN KEY (`ReviewCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `Reviews_products_ProductID_fk` FOREIGN KEY (`ReviewProductID`) REFERENCES `products` (`ProductID`);
+  ADD CONSTRAINT `Reviews_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `Reviews_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
 
 ALTER TABLE `shoppingcart`
   ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CartCustomerID`) REFERENCES `customers` (`CustomerID`),
