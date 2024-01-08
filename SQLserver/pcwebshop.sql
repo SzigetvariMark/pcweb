@@ -60,8 +60,8 @@ ALTER TABLE `orders`
   ADD KEY `orders_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `payments`
-  ADD PRIMARY KEY (`PaymentID`),
-  ADD KEY `Payments_orders_OrderID_fk` (`OrderIDFk`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Payments_orders_OrderID_fk` (`OrderID`);
 
 ALTER TABLE `products`
   ADD PRIMARY KEY (`ProductID`),
