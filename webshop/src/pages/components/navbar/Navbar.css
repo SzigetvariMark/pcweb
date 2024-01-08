@@ -134,3 +134,12 @@
     font-size: 14px;
     gap: 2px;
 }
+
+.login--image{
+    background-color: #013285;
+    border: none;
+    cursor: pointer;
+}
+
+
+
