@@ -84,10 +84,13 @@ ALTER TABLE `orders`
   MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `payments`
-  MODIFY `PaymentID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `products`
-  MODIFY `ProductID` int(20) NOT NULL AUTO_INCREMENT;  
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `shoppingcart`
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `orders`
   ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`OrderCustomerID`) REFERENCES `customers` (`CustomerID`),
