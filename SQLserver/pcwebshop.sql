@@ -44,9 +44,10 @@ CREATE TABLE `reviews` (
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `shoppingcart` (
-  `CartCustomerID` int(20) NOT NULL,
-  `CartProductID` int(20) NOT NULL,
-  `Quantity` int(2) DEFAULT NULL
+  `CustomerID` int(20) NOT NULL,
+  `ProductID` int(20) NOT NULL,
+  `Quantity` int(2) DEFAULT NULL,
+  `ID` int(20) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 ALTER TABLE `customers`
