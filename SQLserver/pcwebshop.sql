@@ -35,12 +35,12 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `reviews` (
-  `ReviewID` int(11) NOT NULL,
-  `ReviewProductID` int(20) NOT NULL,
-  `ReviewCustomerID` int(20) NOT NULL,
+ `ID` int(11) NOT NULL,
+  `ProductID` int(20) NOT NULL,
+  `CustomerID` int(20) NOT NULL,
   `Rating` double NOT NULL,
-  `ReviewText` text DEFAULT NULL,
-  `ReviewDate` date NOT NULL
+  `Comments` varchar(50) DEFAULT NULL,
+  `Date` date NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `shoppingcart` (
