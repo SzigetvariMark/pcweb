@@ -64,7 +64,7 @@ ALTER TABLE `payments`
   ADD KEY `Payments_orders_OrderID_fk` (`OrderID`);
 
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`ProductID`),
+  ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `Products_pk2` (`ProductName`);
 
 ALTER TABLE `reviews`
