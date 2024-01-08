@@ -68,9 +68,9 @@ ALTER TABLE `products`
   ADD UNIQUE KEY `Products_pk2` (`ProductName`);
 
 ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`ReviewID`),
-  ADD KEY `Reviews_customers_CustomerID_fk` (`ReviewCustomerID`),
-  ADD KEY `Reviews_products_ProductID_fk` (`ReviewProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Reviews_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `Reviews_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `shoppingcart`
   ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CartCustomerID`),
