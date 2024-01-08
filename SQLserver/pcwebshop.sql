@@ -9,10 +9,10 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `orders` (
-    `OrderID` int(20) NOT NULL,
-    `OrderCustomerID` int(20) DEFAULT NULL,
-    `OrderProductID` int(20) DEFAULT NULL,
-    `Quantity` int(2) DEFAULT NULL,
+    `ID` int(20) NOT NULL,
+    `CustomerID` int(20) DEFAULT NULL,
+    `ProductID` int(20) DEFAULT NULL,
+    `Quantity` int(2) DEFAULT NULL
     `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     `TotalCost` varchar(250) NOT NULL,
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
