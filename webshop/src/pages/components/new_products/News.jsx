@@ -4,7 +4,7 @@ import "./News.css"
 function News() {
   return (
     <div>
-        <h1 className='h1'>valami</h1>
+        <h1 className='h1'>Legújabb termékek</h1>
     </div>
   )
 }
