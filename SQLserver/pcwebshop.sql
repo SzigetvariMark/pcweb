@@ -78,10 +78,10 @@ ALTER TABLE `shoppingcart`
   ADD KEY `shoppingcart_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `orders`
-  MODIFY `OrderID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `payments`
   MODIFY `PaymentID` int(11) NOT NULL AUTO_INCREMENT;
