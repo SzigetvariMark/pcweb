@@ -73,8 +73,9 @@ ALTER TABLE `reviews`
   ADD KEY `Reviews_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `shoppingcart`
-  ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CartCustomerID`),
-  ADD KEY `shoppingcart_products_ProductID_fk` (`CartProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `shoppingcart_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `customers`
   MODIFY `CustomerID` int(20) NOT NULL AUTO_INCREMENT;
