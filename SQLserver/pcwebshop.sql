@@ -104,6 +104,6 @@ ALTER TABLE `reviews`
   ADD CONSTRAINT `Reviews_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
 
 ALTER TABLE `shoppingcart`
-  ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CartCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `shoppingcart_products_ProductID_fk` FOREIGN KEY (`CartProductID`) REFERENCES `products` (`ProductID`);
+  ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `shoppingcart_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
 COMMIT;
