@@ -51,7 +51,7 @@ CREATE TABLE `shoppingcart` (
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 ALTER TABLE `customers`
-  ADD PRIMARY KEY (`CustomerID`),
+  ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `customers_pk2` (`Email`);
 
 ALTER TABLE `orders`
