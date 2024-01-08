@@ -12,14 +12,14 @@ CREATE TABLE `orders` (
     `ID` int(20) NOT NULL,
     `CustomerID` int(20) DEFAULT NULL,
     `ProductID` int(20) DEFAULT NULL,
-    `Quantity` int(2) DEFAULT NULL
+    `Quantity` int(2) DEFAULT NULL,
     `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     `TotalCost` varchar(250) NOT NULL,
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `payments` (
-  `PaymentID` int(11) NOT NULL,
-  `OrderIDFk` int(20) DEFAULT NULL,
+  `ID` int(11) NOT NULL,
+  `OrderID` int(20) DEFAULT NULL,
   `PaymentMethod` varchar(50) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
