@@ -93,9 +93,9 @@ ALTER TABLE `shoppingcart`
   MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `orders`
-  ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`OrderCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `orders_products_ProductID_fk` FOREIGN KEY (`OrderProductID`) REFERENCES `products` (`ProductID`);
-
+  ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `orders_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
+  
 ALTER TABLE `payments`
   ADD CONSTRAINT `Payments_orders_OrderID_fk` FOREIGN KEY (`OrderIDFk`) REFERENCES `orders` (`OrderID`);
 
