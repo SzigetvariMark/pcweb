@@ -1,10 +1,19 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
 import Login from "../register_login/Login";
 import { FaSearch } from "react-icons/fa";
-import user_image from "/public/img/login.png";
+import user_image from "/img/Login.png";
 
 export default function Navbar() {
+
+  const [login, setLogin] = useState(false)
+
+  function loginRegisterButton()
+  {
+    return setLogin(() => true )
+  }
+
   return (
     <nav className="header">
       <nav className="nav-container">
@@ -37,9 +46,9 @@ export default function Navbar() {
           </a>
           <a>
             <button className="login--image">
-              <img src={user_image} alt="user" className="user--image" />
+              <img src={user_image} alt="user" className="user--image" onClick={loginRegisterButton}/>
             </button>
-            <Login trigger={true} className="log--reg"></Login>
+            <Login trigger={login ? true : false} className="log--reg"></Login>
           </a>
         </ul>
       </nav>
