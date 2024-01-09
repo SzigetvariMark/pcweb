@@ -2,12 +2,16 @@
 .login-form,
 .register-form {
     position: fixed;
-    background-color: rgba(0,0,0,2);
+    overflow-y: unset;
+    background-color:#013285;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .label--reglog {
     text-align: left;
     padding: 0.25rem 0;
+    font-size: 20px;
     color: #ba9a5b;
 }
 
@@ -17,6 +21,7 @@
     padding: 1rem;
     border-radius: 10px;
     color: #ba9a5b;
+    width: 20rem;
 }
 
 .login-button,
@@ -28,10 +33,11 @@
     margin-top: 14px;
     color: #ba9a5b;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 16px;
     font-size: 18px;
     text-transform: uppercase;
     padding: 20px;
+    width: 20rem;
 }
 
 .login-button:hover,
@@ -49,7 +55,7 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     border: none;
-    padding: 20px;
+    padding: 20px 25px;
 }
 
 .link-button:hover {
@@ -71,6 +77,6 @@
     top: 6rem;
     right: 30rem;
     margin: 2rem;
-    padding: 5em 2rem;
-    border-radius: 5px 20px 5px;
+    padding: 3rem 2rem;
+    border-radius: 16px;
 }
