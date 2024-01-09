@@ -4,18 +4,18 @@ CREATE TABLE `customers` (
   `LastName` varchar(255) NOT NULL,
   `UserName` varchar(250) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `PasswordHash` binary(64) NOT NULL,
-  `PhoneNum` varchar(15) NOT NULL
+  `PasswordHash` binary(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `orders` (
-    `ID` int(20) NOT NULL,
-    `CustomerID` int(20) DEFAULT NULL,
-    `ProductID` int(20) DEFAULT NULL,
-    `Quantity` int(2) DEFAULT NULL,
-    `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    `TotalCost` varchar(250) NOT NULL,
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+  `ID` int(20) NOT NULL,
+  `CustomerID` int(20) DEFAULT NULL,
+  `ProductID` int(20) DEFAULT NULL,
+  `Quantity` int(2) DEFAULT NULL,
+  `OrderDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `TotalCost` varchar(250) NOT NULL,
+  `PhoneNum` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `payments` (
   `ID` int(11) NOT NULL,
@@ -29,7 +29,6 @@ CREATE TABLE `products` (
   `Description` varchar(255) NOT NULL,
   `Price` varchar(10) DEFAULT NULL,
   `Quantity in stock` int(3) NOT NULL,
-  `Manufacturer` varchar(40) NOT NULL,
   `Specifications` varchar(250) NOT NULL COMMENT 'CPU, GPU etc..',
   `Images` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
