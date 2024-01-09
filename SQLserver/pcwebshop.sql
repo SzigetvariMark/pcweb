@@ -51,55 +51,59 @@ CREATE TABLE `shoppingcart` (
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 ALTER TABLE `customers`
-  ADD PRIMARY KEY (`CustomerID`),
+  ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `customers_pk2` (`Email`);
 
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`OrderID`),
-  ADD KEY `Orders_customers_CustomerID_fk` (`OrderCustomerID`),
-  ADD KEY `orders_products_ProductID_fk` (`OrderProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Orders_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `orders_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `payments`
-  ADD PRIMARY KEY (`PaymentID`),
-  ADD KEY `Payments_orders_OrderID_fk` (`OrderIDFk`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Payments_orders_OrderID_fk` (`OrderID`);
 
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`ProductID`),
+  ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `Products_pk2` (`ProductName`);
 
 ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`ReviewID`),
-  ADD KEY `Reviews_customers_CustomerID_fk` (`ReviewCustomerID`),
-  ADD KEY `Reviews_products_ProductID_fk` (`ReviewProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Reviews_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `Reviews_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `shoppingcart`
-  ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CartCustomerID`),
-  ADD KEY `shoppingcart_products_ProductID_fk` (`CartProductID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ShoppingCart_customers_CustomerID_fk` (`CustomerID`),
+  ADD KEY `shoppingcart_products_ProductID_fk` (`ProductID`);
 
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `orders`
-  MODIFY `OrderID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `payments`
-  MODIFY `PaymentID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `products`
-  MODIFY `ProductID` int(20) NOT NULL AUTO_INCREMENT;  
-
-ALTER TABLE `orders`
-  ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`OrderCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `orders_products_ProductID_fk` FOREIGN KEY (`OrderProductID`) REFERENCES `products` (`ProductID`);
-
-ALTER TABLE `payments`
-  ADD CONSTRAINT `Payments_orders_OrderID_fk` FOREIGN KEY (`OrderIDFk`) REFERENCES `orders` (`OrderID`);
-
-ALTER TABLE `reviews`
-  ADD CONSTRAINT `Reviews_customers_CustomerID_fk` FOREIGN KEY (`ReviewCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `Reviews_products_ProductID_fk` FOREIGN KEY (`ReviewProductID`) REFERENCES `products` (`ProductID`);
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `shoppingcart`
-  ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CartCustomerID`) REFERENCES `customers` (`CustomerID`),
-  ADD CONSTRAINT `shoppingcart_products_ProductID_fk` FOREIGN KEY (`CartProductID`) REFERENCES `products` (`ProductID`);
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `orders`
+  ADD CONSTRAINT `Orders_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `orders_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
+
+ALTER TABLE `payments`
+  ADD CONSTRAINT `Payments_orders_OrderID_fk` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`ID`);
+
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `Reviews_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `Reviews_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
+
+ALTER TABLE `shoppingcart`
+  ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
+  ADD CONSTRAINT `shoppingcart_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
 COMMIT;
