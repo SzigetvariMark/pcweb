@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "./Modal";
 import "./Register_Login.css";
 
 export default function Login(props) {
@@ -9,12 +10,12 @@ export default function Login(props) {
     e.preventDefault();
     console.log(email);
   };
-  return props.trigger ? (
+  return (
     <div className="all-form">
       <div className="auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="label--reglog">
-            Email
+            E-mail
           </label>
           <input
             value={email}
@@ -36,16 +37,14 @@ export default function Login(props) {
           <button type="submit" className="login-button">
             <span>Bejelentkezés</span>
           </button>
-        <button
-          className="link-button"
-          onClick={() => props.onFormSwitch("register")}
-        >
-          Don't have an account? Register here.
-        </button>
+          <button
+            className="link-button"
+            onClick={() => props.onFormSwitch("register")}
+          >
+            Don't have an account? Register here.
+          </button>
         </form>
       </div>
     </div>
-  ) : (
-    ""
   );
 }

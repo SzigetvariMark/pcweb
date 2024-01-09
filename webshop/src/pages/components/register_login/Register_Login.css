@@ -1,11 +1,27 @@
+.all-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+
+
 .auth-form-container,
 .login-form,
 .register-form {
     position: fixed;
-    overflow-y: unset;
-    background-color:#013285;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #013285;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid #ba9a5b;
+    padding: 40px;
 }
 
 .label--reglog {
@@ -74,9 +90,7 @@
 
 .login-form {
     position: absolute;
-    top: 6rem;
-    right: 30rem;
     margin: 2rem;
-    padding: 3rem 2rem;
     border-radius: 16px;
+    width: 24rem;
 }

@@ -1,19 +1,14 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
+import Modal from "../register_login/Modal";
 import Login from "../register_login/Login";
 import { FaSearch } from "react-icons/fa";
 import user_image from "/img/Login.png";
 import basket_image from "/img/basket.png";
 
 export default function Navbar() {
-
-  const [login, setLogin] = useState(false)
-
-  function loginRegisterButton()
-  {
-    return setLogin(!login)
-  }
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="header">
@@ -44,14 +39,16 @@ export default function Navbar() {
         <ul>
           <a>
             <CustomLink to="/basket">
-              <img src={basket_image} alt="basket" className="basket--image"/>
+              <img src={basket_image} alt="basket" className="basket--image" />
             </CustomLink>
           </a>
           <a>
-            <button className="login--image">
-              <img src={user_image} alt="user" className="user--image" onClick={loginRegisterButton}/>
+            <button className="login--image" onClick={() => setIsOpen(true)}>
+              <img src={user_image} alt="user" className="user--image" />
             </button>
-            <Login trigger={login} className="log--reg"></Login>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+              <Login className="log--reg"></Login>
+            </Modal>
           </a>
         </ul>
       </nav>
