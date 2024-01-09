@@ -2,7 +2,6 @@ CREATE TABLE `customers` (
   `ID` int(20) NOT NULL,
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) NOT NULL,
-  `UserName` varchar(250) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `PasswordHash` binary(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
@@ -21,7 +20,7 @@ CREATE TABLE `payments` (
   `ID` int(11) NOT NULL,
   `OrderID` int(20) DEFAULT NULL,
   `PaymentMethod` varchar(50) NOT NULL
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `products` (
   `ID` int(20) NOT NULL,
@@ -30,7 +29,7 @@ CREATE TABLE `products` (
   `Price` varchar(10) DEFAULT NULL,
   `Quantity in stock` int(3) NOT NULL,
   `Specifications` varchar(250) NOT NULL COMMENT 'CPU, GPU etc..',
-  `Images` blob NOT NULL
+  `Images` char(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `reviews` (
