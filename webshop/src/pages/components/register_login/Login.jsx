@@ -36,13 +36,13 @@ export default function Login(props) {
           <button type="submit" className="login-button">
             <span>Bejelentkezés</span>
           </button>
-        </form>
         <button
           className="link-button"
           onClick={() => props.onFormSwitch("register")}
         >
           Don't have an account? Register here.
         </button>
+        </form>
       </div>
     </div>
   ) : (

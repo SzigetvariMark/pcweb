@@ -2,13 +2,7 @@
 .login-form,
 .register-form {
     position: fixed;
-    top: 25%;
-    left: 42%;
-    width: 16%;
-    background-color: rgba(0,0,0,3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(0,0,0,2);
 }
 
 .label--reglog {
@@ -73,8 +67,10 @@
 }
 
 .login-form {
-    position: relative;
-    padding: 40px;
-    max-width: 640px;
+    position: absolute;
+    top: 6rem;
+    right: 30rem;
+    margin: 2rem;
+    padding: 5em 2rem;
     border-radius: 5px 20px 5px;
 }
