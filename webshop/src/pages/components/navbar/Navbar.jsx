@@ -4,6 +4,7 @@ import "./Navbar.css";
 import Login from "../register_login/Login";
 import { FaSearch } from "react-icons/fa";
 import user_image from "/img/Login.png";
+import basket_image from "/img/basket.png";
 
 export default function Navbar() {
 
@@ -11,7 +12,7 @@ export default function Navbar() {
 
   function loginRegisterButton()
   {
-    return setLogin(() => true )
+    return setLogin(!login)
   }
 
   return (
@@ -42,13 +43,15 @@ export default function Navbar() {
         </div>
         <ul>
           <a>
-            <CustomLink to="/basket">Kosár</CustomLink>
+            <CustomLink to="/basket">
+              <img src={basket_image} alt="basket" className="basket--image"/>
+            </CustomLink>
           </a>
           <a>
             <button className="login--image">
               <img src={user_image} alt="user" className="user--image" onClick={loginRegisterButton}/>
             </button>
-            <Login trigger={login ? true : false} className="log--reg"></Login>
+            <Login trigger={login} className="log--reg"></Login>
           </a>
         </ul>
       </nav>

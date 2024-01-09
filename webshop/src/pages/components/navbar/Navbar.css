@@ -139,7 +139,11 @@
     background-color: #013285;
     border: none;
     cursor: pointer;
+    height: 30px;
 }
 
+.basket--image {
+    height: 30px;
+}
 
 
