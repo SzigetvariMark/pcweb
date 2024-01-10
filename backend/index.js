@@ -1,29 +1,47 @@
-import express from "express"
-import mysql from "mysql"
+import express from "express";
+import mysql from "mysql";
 
-const app = express()
+const app = express();
 
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "*RvMMQDDsw&qW3JXpyb&",
+  database: "pcwebshop",
+});
 
-const db = mysql.createConnection ({
-    host: "localhost",
-    user: "root",
-    password: "*RvMMQDDsw&qW3JXpyb&",
-    database: "pcwebshop"
-})
+app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.json("hello this is the backend")
-})
+  res.json("hello this is the backend");
+});
 
 app.get("/products", (req, res) => {
-    const q = "SELECT * FROM products"
-    db.query(q, (err,data)=> {
-        if(err) return res.json(err)
-        return res.json(data)
-    })
-})
+  const q = "SELECT * FROM products";
+  db.query(q, (err, data) => {
+    if (err) return res.json(err);
+    return res.json(data);
+  });
+});
 
+app.post("/products", (req, res) => {
+  const q =
+    "INSERT INTO products (`ProductName`, `Description`, `Price`, `QuantityInStock`, `Specifications`, `Images`) VALUES (?)";
+  const values = [
+    "Radeon",
+    "7800XT GPU",
+    "160.000",
+    5,
+    "GPU",
+    "https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7800XT(1).jpg?raw=true",
+  ];
+
+  db.query(q, [values], (err, data) => {
+    if (err) return res.json(err);
+    return res.json("Product has been created successfully.");
+  });
+});
 
 app.listen(8800, () => {
-    console.log("Connected to backend!")
-})
+  console.log("Connected to backend!");
+});
