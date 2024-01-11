@@ -4,7 +4,17 @@
 
 .gpu {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding-top: 24px;
 }
 
-.div {}
+.div {
+    border: 2px solid #ba9a5b;
+    width: 37rem;
+    margin-right: 18px;
+}
+
+.gpu--images {
+    height: 40rem;
+    width: 36rem;
+}

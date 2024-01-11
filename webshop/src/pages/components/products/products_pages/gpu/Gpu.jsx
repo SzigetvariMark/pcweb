@@ -24,7 +24,9 @@ function Gpu() {
         {gpus.map((gpu) => (
           <div className="div" key={gpu.ID}>
             <h2>{gpu.ProductName}</h2>
-            {gpu.Images && <img src={gpu.Images} alt="videókártya" />}
+            {gpu.Images && (
+              <img src={gpu.Images} alt="videókártya" className="gpu--images" />
+            )}
             <p>{gpu.Description}</p>
             <h3>{gpu.Price}</h3>
             <h4>{gpu.Specifications}</h4>
