@@ -28,12 +28,12 @@ app.post("/products", (req, res) => {
   const q =
     "INSERT INTO products (`ProductName`, `Description`, `Price`, `QuantityInStock`, `Specifications`, `Images`) VALUES (?)";
   const values = [
-    "Radeon",
-    "7800XT GPU",
-    "160.000",
-    5,
-    "GPU",
-    "https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7800XT(1).jpg?raw=true",
+    req.body.ProductName,
+    req.body.Description,
+    req.body.Price,
+    req.body.QuantityInStock,
+    req.body.Specifications,
+    req.body.Images,
   ];
 
   db.query(q, [values], (err, data) => {

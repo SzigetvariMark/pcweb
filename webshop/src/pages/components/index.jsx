@@ -8,3 +8,4 @@ export { default as News } from "./new_products/News";
 export { default as Actions } from "./actions/Actions";
 export { default as Head } from "./header/Head";
 export { default as Footer } from "./footer/Footer";
+export { default as Gpu } from "./products/products_pages/gpu/Gpu";

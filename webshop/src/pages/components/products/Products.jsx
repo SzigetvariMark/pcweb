@@ -8,7 +8,7 @@ function Products() {
       <h1 className="products--title">Kategóriák</h1>
       <section className="section-products">
         <div className="product">
-          <Link to="/actions">
+          <Link to="/products_pages/gpu">
             <input type="button" className="product-gpu" value="GPU"></input>
           </Link>
         </div>
