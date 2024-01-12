@@ -1,14 +1,13 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
-import Modal from "../register_login/Modal";
 import Login from "../register_login/Login";
 import { FaSearch } from "react-icons/fa";
 import user_image from "/img/Login.png";
 import basket_image from "/img/basket.png";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   return (
     <nav className="header">
@@ -29,8 +28,7 @@ export default function Navbar() {
             type="text"
             className="search-text"
             placeholder="videókártya"
-          >
-          </input>
+          ></input>
         </form>
         <div className="top-nav-div">
           <input type="submit" className="hun" value=" " />
@@ -43,12 +41,17 @@ export default function Navbar() {
             </CustomLink>
           </a>
           <a>
-            <button className="login--image" onClick={() => setIsOpen(true)}>
+            <button
+              className="login--image"
+              onClick={() => setButtonPopup(true)}
+            >
               <img src={user_image} alt="user" className="user--image" />
             </button>
-            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-              <Login className="log--reg"></Login>
-            </Modal>
+            <Login
+              className="log--reg"
+              trigger={buttonPopup}
+              setTrigger={setButtonPopup}
+            ></Login>
           </a>
         </ul>
       </nav>

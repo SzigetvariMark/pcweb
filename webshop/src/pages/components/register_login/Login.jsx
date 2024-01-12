@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Register_Login.css";
 
-export default function Login(props ,{ onClose }) {
+export default function Login(props) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
@@ -9,13 +9,16 @@ export default function Login(props ,{ onClose }) {
     e.preventDefault();
     console.log(email);
   };
-  return (
+  return props.trigger ? (
     <div className="all-form">
       <div className="auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
-        <button className="close--button" onClick={onClose}>
-        X
-        </button>
+          <button
+            className="close--button"
+            onClick={() => props.setTrigger(false)}
+          >
+            X
+          </button>
           <label htmlFor="email" className="label--reglog">
             E-mail
           </label>
@@ -48,5 +51,7 @@ export default function Login(props ,{ onClose }) {
         </form>
       </div>
     </div>
+  ) : (
+    ""
   );
 }
