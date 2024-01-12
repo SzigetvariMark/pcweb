@@ -37,7 +37,7 @@
     padding: 1rem;
     border-radius: 10px;
     color: #ba9a5b;
-    width: 20rem;
+    width: 23rem;
 }
 
 .login-button,
@@ -46,14 +46,14 @@
     border: 2px solid #ba9a5b;
     outline: none;
     transition: 0.5s ease-in-out;
-    margin-top: 14px;
+    margin-top: 16px;
     color: #ba9a5b;
     cursor: pointer;
     border-radius: 16px;
     font-size: 18px;
     text-transform: uppercase;
     padding: 20px;
-    width: 20rem;
+    width: 23rem;
 }
 
 .login-button:hover,
@@ -71,7 +71,7 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     border: none;
-    padding: 20px 25px;
+    padding: 20px 3.1rem;
 }
 
 .link-button:hover {
@@ -79,32 +79,30 @@
 }
 
 .register-form {
-    position: relative;
-    height: 40rem;
-    width: 100%;
-    border: 3px #ba9a5b solid;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 20px 5px 20px;
+    position: absolute;
+    margin: 2rem;
+    border-radius: 16px;
+    width: 28rem;
 }
 
 .login-form {
     position: absolute;
     margin: 2rem;
     border-radius: 16px;
-    width: 24rem;
+    width: 28rem;
 }
 
 .close--button {
     position: absolute;
     width: 2rem;
-    margin: -2rem 19rem;
+    margin: -2.2rem 23.1rem;
     background-color: #013285;
     border: none;
     cursor: pointer;
     color: #ba9a5b;
     font-size: 18px;
     transition: 0.1s;
+    border-radius: 11px;
 }
 
 .close--button:hover {

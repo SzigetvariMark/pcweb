@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Register_Login.css";
+import Register from "./Register";
 
 export default function Login(props) {
+  const [registerPopup, setRegisterPopup] = useState(false);
+
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
@@ -44,10 +47,13 @@ export default function Login(props) {
           </button>
           <button
             className="link-button"
-            onClick={() => props.onFormSwitch("register")}
+            onClick={() =>
+              setRegisterPopup(true, () => props.setTrigger(false))
+            }
           >
             Don't have an account? Register here.
           </button>
+          <Register triggers={registerPopup}></Register>
         </form>
       </div>
     </div>

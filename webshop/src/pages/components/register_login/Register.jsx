@@ -10,13 +10,19 @@ export default function Register(props) {
     e.preventDefault();
     console.log(email);
   };
-  return props.trigger ? (
+  return props.triggers ? (
     <div className="all-form">
       <div className="auth-form-container">
         <form className="register-form" onSubmit={handleSubmit}>
           <label htmlFor="name" className="label--reglog">
             Vezetéknév
           </label>
+          <button
+            className="close--button"
+            onClick={() => props.setTrigger(false)}
+          >
+            X
+          </button>
           <input
             value={name}
             name="name"
