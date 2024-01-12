@@ -13,15 +13,15 @@ export default function Login(props) {
     <div className="all-form">
       <div className="auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
+          <label htmlFor="email" className="label--reglog">
+            E-mail
+          </label>
           <button
             className="close--button"
             onClick={() => props.setTrigger(false)}
           >
             X
           </button>
-          <label htmlFor="email" className="label--reglog">
-            E-mail
-          </label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
