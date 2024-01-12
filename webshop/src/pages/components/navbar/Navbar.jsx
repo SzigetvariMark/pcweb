@@ -23,14 +23,14 @@ export default function Navbar() {
         </ul>
         <form className="form-container">
           <button type="submit" className="search-button">
-            {" "}
-            <FaSearch />{" "}
+            <FaSearch />
           </button>
           <input
             type="text"
             className="search-text"
             placeholder="videókártya"
-          ></input>
+          >
+          </input>
         </form>
         <div className="top-nav-div">
           <input type="submit" className="hun" value=" " />

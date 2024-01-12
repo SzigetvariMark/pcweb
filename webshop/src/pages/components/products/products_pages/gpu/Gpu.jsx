@@ -23,13 +23,17 @@ function Gpu() {
       <div className="gpu">
         {gpus.map((gpu) => (
           <div className="div" key={gpu.ID}>
-            <h2>{gpu.ProductName}</h2>
+            <button>
             {gpu.Images && (
               <img src={gpu.Images} alt="videókártya" className="gpu--images" />
-            )}
+              )}
+            </button>
+            <div>
+            <h2>Termékneve: {gpu.ProductName}</h2>
             <p>{gpu.Description}</p>
             <h3>{gpu.Price}</h3>
             <h4>{gpu.Specifications}</h4>
+            </div>
           </div>
         ))}
       </div>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Modal from "./Modal";
 import "./Register_Login.css";
 
-export default function Login(props) {
+export default function Login(props ,{ onClose }) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
@@ -14,6 +13,9 @@ export default function Login(props) {
     <div className="all-form">
       <div className="auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
+        <button className="close--button" onClick={onClose}>
+        X
+        </button>
           <label htmlFor="email" className="label--reglog">
             E-mail
           </label>
