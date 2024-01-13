@@ -17,4 +17,6 @@ npm i express mysql nodemon
 
 npm i cors
 
+npm add bcryptjs
+
 ```

@@ -3,7 +3,7 @@ CREATE TABLE `customers` (
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `PasswordHash` binary(64) NOT NULL
+  `PasswordHash` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `orders` (
@@ -27,7 +27,7 @@ CREATE TABLE `products` (
   `ProductName` varchar(255) NOT NULL,
   `Description` varchar(255) NOT NULL,
   `Price` varchar(10) DEFAULT NULL,
-  `Quantity in stock` int(3) NOT NULL,
+  `QuantityInStock` int(3) NOT NULL,
   `Specifications` varchar(250) NOT NULL COMMENT 'CPU, GPU etc..',
   `Images` char(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
