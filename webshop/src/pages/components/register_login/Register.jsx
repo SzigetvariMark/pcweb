@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register_Login.css";
 
@@ -10,6 +11,8 @@ export default function Register(props) {
     PasswordHash: "",
   });
 
+  const [err, setError] = useState(null);
+
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -17,13 +20,9 @@ export default function Register(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "http://localhost:8800/api/auth/register",
-        inputs
-      );
-      console.log(res);
+      await axios.post("http://localhost:8800/api/auth/register", inputs);
     } catch (err) {
-      console.log(err);
+      setError(err);
     }
   };
 
@@ -98,6 +97,7 @@ export default function Register(props) {
           >
             Already have an account? Login here.
           </button>
+          {err && <p className="error--code">{err}</p>}
         </form>
       </div>
     </div>

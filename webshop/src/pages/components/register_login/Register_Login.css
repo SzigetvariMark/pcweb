@@ -107,3 +107,8 @@
 .close--button:hover {
     border: 2px solid #ba9a5b;
 }
+
+.error--code {
+    color: red;
+    font-size: 20px;
+}
