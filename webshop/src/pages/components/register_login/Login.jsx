@@ -47,13 +47,14 @@ export default function Login(props) {
           </button>
           <button
             className="link-button"
-            onClick={() =>
-              setRegisterPopup(true, () => props.setTrigger(false))
-            }
+            onClick={() => setRegisterPopup(true)}
           >
             Don't have an account? Register here.
           </button>
-          <Register triggers={registerPopup}></Register>
+          <Register
+            triggers={registerPopup}
+            setTriggers={setRegisterPopup}
+          ></Register>
         </form>
       </div>
     </div>

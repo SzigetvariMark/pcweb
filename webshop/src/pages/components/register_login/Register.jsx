@@ -19,7 +19,7 @@ export default function Register(props) {
           </label>
           <button
             className="close--button"
-            onClick={() => props.setTrigger(false)}
+            onClick={() => props.setTriggers(false)}
           >
             X
           </button>
@@ -74,13 +74,13 @@ export default function Register(props) {
           <button type="submit" className="register-button">
             <span>Regisztráció</span>
           </button>
+          <button
+            className="link-button"
+            onClick={() => props.setTriggers(false)}
+          >
+            Already have an account? Login here.
+          </button>
         </form>
-        <button
-          className="link-button"
-          onClick={() => props.onFormSwitch("login")}
-        >
-          Already have an account? Login here.
-        </button>
       </div>
     </div>
   ) : (
