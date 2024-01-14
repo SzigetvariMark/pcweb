@@ -17,7 +17,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `payments` (
-  `ID` int(11) NOT NULL,
+  `ID` int(20) NOT NULL,
   `OrderID` int(20) DEFAULT NULL,
   `PaymentMethod` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
@@ -33,7 +33,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 CREATE TABLE `reviews` (
- `ID` int(11) NOT NULL,
+ `ID` int(20) NOT NULL,
   `ProductID` int(20) NOT NULL,
   `CustomerID` int(20) NOT NULL,
   `Rating` double NOT NULL,
@@ -63,7 +63,6 @@ ALTER TABLE `payments`
 
 ALTER TABLE `products`
   ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `Products_pk2` (`ProductName`);
 
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`ID`),
@@ -104,4 +103,21 @@ ALTER TABLE `reviews`
 ALTER TABLE `shoppingcart`
   ADD CONSTRAINT `ShoppingCart_customers_CustomerID_fk` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`),
   ADD CONSTRAINT `shoppingcart_products_ProductID_fk` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ID`);
+
+--Auto_Increments nullázás:
+-- ALTER TABLE tablename AUTO_INCREMENT = 0;
+-- INSERT INTO:
+INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specifications, Images) 
+VALUES ( 'Geforce RTX 4070ti 12GB Videókártya', '12GB GDDR6X memóriával, 2 darab HDMI kimenettel, 3 darab DisplayPort kimenettel ellátva', '150.000', 3, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/4070ti.jpg?raw=true');
+
+INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specifications, Images) 
+VALUES ( 'Geforce RTX 3060 8GB Videókártya', '8GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '130.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/3060.jpg?raw=true');
+
+INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specifications, Images) 
+VALUES ( 'Gigabyte RX 7800 XT GAMING OC 16GB Videókártya', 'Gaming videókártya, 16GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '280.000', 1, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7800XT.jpg?raw=true');
+
+INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specifications, Images) 
+VALUES ( 'ASUS TUF-RX7900XT-O20G-GAMING Radeon RX 7900 XT Videókártya', '20GB GDDR6 memóriával, 1 darab HDMI kimenettel, 3 darab DisplayPort kimenettel ellátva', '450.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7900XT.jpg?raw=true');
+
 COMMIT;
+
