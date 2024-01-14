@@ -1,5 +1,6 @@
 import { db } from "../db.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 export const register = (req, res) => {
   const q = "SELECT * FROM customers WHERE Email = ?";
@@ -41,6 +42,8 @@ export const login = (req, res) => {
 
     if (!isPasswordCorrect)
       return res.status(400).json("Wrong email or password!");
+
+    const token = jwt.sign({ ID: data[0].ID }, "jwtkey");
   });
 };
 export const logout = (req, res) => {};
