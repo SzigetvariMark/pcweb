@@ -14,8 +14,6 @@ export default function Login(props) {
 
   const [err, setError] = useState(null);
 
-  const navigate = useNavigate();
-
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -24,7 +22,6 @@ export default function Login(props) {
     e.preventDefault();
     try {
       await axios.post("http://localhost:8800/api/auth/login", inputs);
-      navigate("/");
     } catch (err) {
       setError(err);
     }

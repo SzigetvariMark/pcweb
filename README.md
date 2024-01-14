@@ -13,6 +13,8 @@ npm i react-icons
 
 npm i axios
 
+###Backend
+
 npm i express mysql nodemon
 
 npm i cors
@@ -20,5 +22,7 @@ npm i cors
 npm add bcryptjs
 
 npm i jsonwebtoken
+
+npm i cookie-parser
 
 ```

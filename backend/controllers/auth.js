@@ -44,6 +44,14 @@ export const login = (req, res) => {
       return res.status(400).json("Wrong email or password!");
 
     const token = jwt.sign({ ID: data[0].ID }, "jwtkey");
+    const { PasswordHash, ...other } = data[0];
+
+    res
+      .cookie("access_token", token, {
+        httpOnly: true,
+      })
+      .status(200)
+      .jsnon(other);
   });
 };
 export const logout = (req, res) => {};
