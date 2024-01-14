@@ -19,4 +19,6 @@ npm i cors
 
 npm add bcryptjs
 
+npm i jsonwebtoken
+
 ```
