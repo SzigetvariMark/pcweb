@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register_Login.css";
 import Register from "./Register";
 import axios from "axios";
@@ -60,7 +60,7 @@ export default function Login(props) {
           <button type="submit" className="login-button" onClick={handleSubmit}>
             <span>Bejelentkezés</span>
           </button>
-          <button
+          <Link
             className="link-button"
             onClick={() => {
               setRegisterPopup(true);
@@ -68,7 +68,7 @@ export default function Login(props) {
             }}
           >
             Don't have an account? Register here.
-          </button>
+          </Link>
           <Register
             triggers={registerPopup}
             setTriggers={setRegisterPopup}
