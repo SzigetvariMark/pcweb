@@ -112,6 +112,5 @@ INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specific
 ( 'Geforce RTX 3060 8GB Videókártya', '8GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '130.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/3060.jpg?raw=true'),
 ( 'Gigabyte RX 7800 XT GAMING OC 16GB Videókártya', 'Gaming videókártya, 16GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '280.000', 1, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7800XT.jpg?raw=true'),
 ( 'ASUS TUF-RX7900XT-O20G-GAMING Radeon RX 7900 XT Videókártya', '20GB GDDR6 memóriával, 1 darab HDMI kimenettel, 3 darab DisplayPort kimenettel ellátva', '450.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7900XT.jpg?raw=true'),
-
 COMMIT;
 
