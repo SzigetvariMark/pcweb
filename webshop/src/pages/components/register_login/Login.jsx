@@ -30,7 +30,7 @@ export default function Login(props) {
   return props.trigger ? (
     <div className="all-form">
       <div className="auth-form-container">
-        <form className="login-form">
+        <form className="login-form" onSubmit={(e) => e.preventDefault()}>
           <label htmlFor="email" className="label--reglog">
             E-mail
           </label>
@@ -64,7 +64,6 @@ export default function Login(props) {
             className="link-button"
             onClick={() => {
               setRegisterPopup(true);
-              setTrigger(false);
             }}
           >
             Don't have an account? Register here.
