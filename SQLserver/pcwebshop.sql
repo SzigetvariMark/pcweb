@@ -112,5 +112,10 @@ INSERT INTO products (ProductName, Description, Price, Quantityinstock, Specific
 ( 'Geforce RTX 3060 8GB Videókártya', '8GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '130.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/3060.jpg?raw=true'),
 ( 'Gigabyte RX 7800 XT GAMING OC 16GB Videókártya', 'Gaming videókártya, 16GB GDDR6 memóriával, 2 darab HDMI kimenettel, 2 darab DisplayPort kimenettel ellátva', '280.000', 1, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7800XT.jpg?raw=true'),
 ( 'ASUS TUF-RX7900XT-O20G-GAMING Radeon RX 7900 XT Videókártya', '20GB GDDR6 memóriával, 1 darab HDMI kimenettel, 3 darab DisplayPort kimenettel ellátva', '450.000', 2, 'GPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/7900XT.jpg?raw=true'),
+('Intel I9 gen14 Processzor', '14. generációs 24 magos processzor, DDR4/DDR5 támogatással', '280.000', 4, 'CPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/i9gen14.jpg?raw=true'),
+('Intel I7 gen14 Processzor', '14. generációs 12 magos processzor, DDR4/DDR5 támogatással', '200.000', 1, 'CPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/i7gen14.jpg?raw=true'),
+('Intel I5 gen14 Processzor', '14. generációs 14 magos processzor, DDR4/DDR5 támogatással', '140.000', 3, 'CPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/i5gen14.jpg?raw=true'),
+('Intel I3 gen10 Processzor', '10. generációs 4 magos processzor, DDR4 támogatással', '60.000', 5, 'CPU', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/i3.jpg?raw=true'),
+('ASUS TUF GAMING B550-PLUS alaplap', 'AMD AM4 socket, PCI Express 4.0, 2× PCIe x16, 3× PCIe x1, 4×, DDR4, 4600MHz (OC), 6× SATA III, 2× M.2, USB 3.2 Gen 2, USB-C, RJ-45 (LAN) 2,5Gbps, HDMI,', '55.000', 4, 'MOBO', 'https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/B550.jpg?raw=true');
 COMMIT;
 
