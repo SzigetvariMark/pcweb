@@ -3,15 +3,15 @@ import "./Head.css";
 
 function Head() {
   function freeDelivery() {
-    alert("Ingyenes szállítás");
-    console.log("hello");
+    alert("Ingyenes szállítás, 200.000 forint felett!");
   }
   return (
     <header className="head">
       <input
         type="button"
-        value="Ingyenes szállítás minden megrendelésre"
+        value="Akár ingyenes kiszállítás minden megrendelésre"
         className="head--input"
+        onClick={freeDelivery}
       />
       <input
         type="button"
