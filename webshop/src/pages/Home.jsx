@@ -4,6 +4,7 @@ import { Actions } from "./components";
 import { Footer } from "./components";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import "./productPage.css";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -33,7 +34,7 @@ export default function Home() {
         <div className="gpu">
           {posts.map((item) => (
             <div className="div" key={item.ID}>
-              <button>
+              <button className="picture--img">
                 {item.Images && (
                   <img
                     src={item.Images}
@@ -43,7 +44,7 @@ export default function Home() {
                 )}
               </button>
               <div>
-                <h2>Termékneve: {item.ProductName}</h2>
+                <h2>{item.ProductName}</h2>
                 <p>{item.Description}</p>
                 <h3>{item.Price}</h3>
                 <h4>{item.Cat}</h4>
