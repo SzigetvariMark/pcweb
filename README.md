@@ -15,7 +15,7 @@ npm i axios
 
 ###Backend
 
-npm i express mysql nodemon
+npm i express mysql2 nodemon
 
 npm i cors
 
