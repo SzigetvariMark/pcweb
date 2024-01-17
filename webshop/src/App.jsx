@@ -8,6 +8,7 @@ import {
   Actions,
   Head,
   Gpu,
+  Auction,
 } from "./pages/components";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/new_products" element={<News />}></Route>
           <Route path="/actions" element={<Actions />}></Route>
           <Route path="/products_pages/gpu" element={<Gpu />}></Route>
+          <Route path="auction" element={<Auction />}></Route>
           <Route
             path="/login"
             element={

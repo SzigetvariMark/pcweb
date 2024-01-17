@@ -16,7 +16,7 @@ export default function Navbar() {
           <img src="img/lgo.jpeg" alt="kep" className="title-img"></img>
         </Link>
         <ul>
-          <CustomLink to="/about">Rólunk</CustomLink>
+          <CustomLink to="/auction">Aukció</CustomLink>
           <CustomLink to="/new_products">Újdonságok</CustomLink>
           <CustomLink to="/actions">Akciók</CustomLink>
         </ul>
