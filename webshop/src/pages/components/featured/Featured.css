@@ -8,6 +8,8 @@
     margin: 0;
     font-weight: normal;
     text-align: left;
+    font-size: 3.2rem;
+    margin: 20px 0;
 }
 
 .featured--desc {
@@ -35,7 +37,8 @@
 
 .featured--buttons {
     float: left;
-    margin-top: 16px;
+    margin-top: 25px;
+    display: inline-flex;
 }
 
 .featured--btn {

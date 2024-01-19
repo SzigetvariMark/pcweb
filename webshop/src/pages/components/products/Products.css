@@ -35,7 +35,7 @@
 .product-mtb:hover,
 .product-psu:hover,
 .product-case:hover {
-    filter: brightness(50%);
+    filter: brightness(60%);
     color: #5542F6;
     font-size: 6rem;
 }

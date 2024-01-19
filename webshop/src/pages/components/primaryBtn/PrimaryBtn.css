@@ -1,5 +1,12 @@
 .StyledButton {
     background-color: #5542F6;
+    display: inline-flex;
+
+    svg {
+        height: 25px;
+        margin-right: 5px;
+    }
+
     cursor: pointer;
     border: none;
     color: #fff;
