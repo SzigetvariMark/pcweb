@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    background-color: #013285;
+    background-color: #222;
     display: flex;
     flex-wrap: wrap;
     border: 2px solid #ba9a5b;
@@ -95,7 +95,7 @@
     position: absolute;
     width: 2rem;
     margin: -2.2rem 23.1rem;
-    background-color: #013285;
+    background-color: #222;
     border: none;
     cursor: pointer;
     color: #ba9a5b;

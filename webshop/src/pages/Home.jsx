@@ -26,7 +26,7 @@ export default function Home() {
   }, [cat]);
 
   return (
-    <div>
+    <>
       <Featured />
       <Products />
       <div className="gpu--container">
@@ -54,6 +54,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

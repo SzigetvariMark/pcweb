@@ -1,7 +1,7 @@
 .featured--container {
     background-color: #222;
     color: #fff;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .featured--title {
@@ -16,12 +16,34 @@
     text-align: left;
 }
 
-.featured--wrapper{
+.featured--wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .8fr 1.2fr;
     gap: 40px;
 }
 
 .featured--image {
     max-width: 100%;
+    border-radius: 16px;
+}
+
+.featured--column {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.featured--buttons {
+    float: left;
+    margin-top: 16px;
+}
+
+.featured--btn {
+    cursor: pointer;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-right: 11px;
 }

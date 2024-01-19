@@ -1,11 +1,13 @@
 .products--main {
     background-color: whitesmoke;
-    border-radius: 11px 11px 0px 0px;
+    border-radius: 20px;
+    padding: 60px;
 }
 
 .products--title {
-    color: cadetblue;
-    padding: 2rem;
+    color: black;
+    padding-bottom: 3rem;
+    font-size: 50px;
 }
 
 .section-products {
@@ -34,7 +36,7 @@
 .product-psu:hover,
 .product-case:hover {
     filter: brightness(50%);
-    color: red;
+    color: #5542F6;
     font-size: 6rem;
 }
 

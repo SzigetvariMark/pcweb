@@ -5,9 +5,9 @@ import {
   Register,
   Basket,
   News,
-  Head,
   Gpu,
   Auction,
+  Center,
 } from "./pages/components";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -19,8 +19,7 @@ function App() {
     setCurrentForm(formName);
   };
   return (
-    <>
-      <Head />
+    <Center>
       <Navbar />
       <div className="container">
         <Routes>
@@ -42,7 +41,7 @@ function App() {
           <Route path="/basket" element={<Basket />}></Route>
         </Routes>
       </div>
-    </>
+    </Center>
   );
 }
 

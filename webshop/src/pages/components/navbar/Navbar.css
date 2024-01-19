@@ -1,16 +1,7 @@
-.header {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #222;
-}
-
 .nav-container {
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 10rem;
 }
 
 .title-img {
@@ -135,7 +126,7 @@
     gap: 2px;
 }
 
-.login--image{
+.login--image {
     background-color: #222;
     border: none;
     cursor: pointer;
@@ -145,5 +136,3 @@
 .basket--image {
     height: 30px;
 }
-
-

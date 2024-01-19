@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./center.css";
 
-function center({children}) {
-  return (
-    <div>{children}</div>
-  )
+function center({ children }) {
+  return <div className="StyledDiv">{children}</div>;
 }
 
-export default center
+export default center;
