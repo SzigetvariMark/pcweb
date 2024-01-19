@@ -9,3 +9,4 @@ export { default as Head } from "./header/Head";
 export { default as Footer } from "./footer/Footer";
 export { default as Gpu } from "./products/products_pages/gpu/Gpu";
 export { default as Auction } from "./auction/Auction";
+export { default as Featured } from "./featured/Featured";

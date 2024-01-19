@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Products } from "./components";
 import { Footer } from "./components";
+import { Featured } from "./components";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import "./productPage.css";
@@ -26,6 +27,7 @@ export default function Home() {
 
   return (
     <div>
+      <Featured />
       <Products />
       <div className="gpu--container">
         <h1>Termékek</h1>

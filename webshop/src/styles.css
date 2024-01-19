@@ -12,6 +12,7 @@ body {
     overflow: hidden;
     color: black;
     overflow: auto;
+    background-color: #222;
 }
 
 .container {

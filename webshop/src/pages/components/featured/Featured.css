@@ -1,0 +1,27 @@
+.featured--container {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.featured--title {
+    margin: 0;
+    font-weight: normal;
+    text-align: left;
+}
+
+.featured--desc {
+    color: #aaa;
+    font-size: .8rem;
+    text-align: left;
+}
+
+.featured--wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.featured--image {
+    max-width: 100%;
+}
