@@ -5,7 +5,6 @@ import {
   Register,
   Basket,
   News,
-  Actions,
   Head,
   Gpu,
   Auction,
@@ -28,7 +27,6 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/new_products" element={<News />}></Route>
-          <Route path="/actions" element={<Actions />}></Route>
           <Route path="/products_pages/gpu" element={<Gpu />}></Route>
           <Route path="auction" element={<Auction />}></Route>
           <Route

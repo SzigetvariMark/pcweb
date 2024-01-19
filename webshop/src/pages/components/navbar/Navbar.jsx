@@ -18,7 +18,6 @@ export default function Navbar() {
         <ul>
           <CustomLink to="/auction">Aukció</CustomLink>
           <CustomLink to="/new_products">Újdonságok</CustomLink>
-          <CustomLink to="/actions">Akciók</CustomLink>
         </ul>
         <form className="form-container">
           <button type="submit" className="search-button">
