@@ -15,18 +15,20 @@ export default function Products() {
       <Link className="btn-primary" href={"/products/new"}>
         Add new product
       </Link>
-      <table>
+      <table className="basic mt-2">
         <thead>
           <tr>
             <td>Product name</td>
-            <td></td>
+            <td>Edits</td>
           </tr>
         </thead>
         <tbody>
           {products.map((product) => (
             <tr>
               <td>{product.title}</td>
-              <td>buttons</td>
+              <td>
+                <Link href={"/products/" + product._id}>Edit</Link>
+              </td>
             </tr>
           ))}
         </tbody>
