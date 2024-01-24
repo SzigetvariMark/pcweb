@@ -1,6 +1,7 @@
 import Layout from "@components/Layout";
 import axios from "axios";
 import { redirect } from "next/navigation";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function NewProduct() {
@@ -8,6 +9,7 @@ export default function NewProduct() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [goToProducts, setGoToProducts] = useState(false);
+  const router = useRouter();
 
   async function createProduct(ev) {
     ev.preventDefault();
@@ -16,7 +18,7 @@ export default function NewProduct() {
     setGoToProducts(true);
   }
   if (goToProducts) {
-    return redirect("/products");
+    router.push("/products");
   }
   return (
     <Layout>
