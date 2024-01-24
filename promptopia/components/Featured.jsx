@@ -8,11 +8,11 @@ const Featured = () => {
               Pro anywhere
             </h1>
             <p className="text-s text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              porro omnis nobis tenetur quos excepturi. Voluptate. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit. Necessitatibus,
-              doloribus natus veritatis fuga nisi deserunt dolor optio nobis
-              exercitationem.
+            Apple MacBook Air MacBook Air Szárnyaló erő.
+            Legvékonyabb és legkönnyebb laptopunkat teljesen újjávarázsolta az Apple M1 chip ereje. 
+            Akár 3,5-ször gyorsabb CPU-t és akár ötször sebesebb GPU-t rejt. 
+            Az eddigi legfejlettebb Neural Engine-nel akár kilencszer gyorsabb gépi tanulásra képes. 
+            Csendesen működik, ventilátor nélkül, az aksija pedig hosszabb ideig bírja, mint eddig bármelyik MacBook Airé. Ilyen könnyen még soha nem vihettél magaddal egy ekkora teljesítményt nyújtó laptopot.
             </p>
             <div className="float-left mt-6 inline-flex">
               <button className="pointer border-none text-white py-3 px-5 rounded-md text-lg mr-3">
@@ -34,7 +34,7 @@ const Featured = () => {
         </div>
         <div className="flex justify-right items-center">
           <img
-            src="https://github.com/SzigetvariMark/pcweb/blob/main/SQLIMG/i9gen14.jpg?raw=true"
+            src="https://raw.githubusercontent.com/SzigetvariMark/pcweb/ef16efed00bf8dfaaf1d722e5192607b74001aa2/webshop/public/img/laptop.png"
             alt="Processzor"
             className="rounded-3xl max-h-96 ml-20"
           />
