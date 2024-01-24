@@ -23,7 +23,7 @@ export default function DeleteProductPage() {
 
   return (
     <Layout>
-      <h1>Do you really want to delete {productInfo?.title}?</h1>
+      <h1>Do you really want to delete "{productInfo?.description}"?</h1>
       <button className="btn-primary">Yes</button>
       <button onClick={goBack} className="btn-primary">
         No
