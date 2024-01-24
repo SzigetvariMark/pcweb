@@ -4,39 +4,39 @@
 
 input,
 textarea {
-  @apply border-2 border-gray-300 rounded-lg px-1 w-full resize-none;
-  @apply mb-2;
+    @apply border-2 border-gray-300 rounded-lg px-1 w-full resize-none;
+    @apply mb-2;
 }
 
 input:focus,
 textarea:focus {
-  @apply border-blue-900;
+    @apply border-blue-900;
 }
 
 h1 {
-  @apply text-blue-900 mb-2 text-xl;
+    @apply text-blue-900 mb-2 text-xl;
 }
 
 label {
-  @apply text-blue-900;
+    @apply text-blue-900;
 }
 
 .btn-primary {
-  @apply bg-blue-900 text-white px-4 py-1 rounded-xl font-serif;
+    @apply bg-blue-900 text-white px-4 py-1 rounded-xl font-serif;
 }
 
 table.basic {
-  @apply w-full;
+    @apply w-full;
 }
 
 table.basic thead tr td {
-  @apply bg-blue-200;
+    @apply bg-blue-200;
 }
 
 table.basic tr td {
-  @apply border border-blue-400 p-1;
+    @apply border border-blue-400 p-1;
 }
 
 table.basic a {
-  @apply bg-blue-900 text-white text-sm m-1 p-1 rounded-lg flex;
+    @apply bg-blue-900 text-white text-sm py-1 px-2 rounded-md inline-flex gap-1 mr-2 items-center;
 }
