@@ -42,5 +42,5 @@ table.basic a {
 }
 
 .btn-red {
-  @apply bg-red-700 text-white rounded-xl text-sm px-4 py-2 font-serif;
+  @apply bg-red-700 text-white rounded-xl text-sm px-4 py-2 font-serif hover:text-2xl duration-150;
 }
