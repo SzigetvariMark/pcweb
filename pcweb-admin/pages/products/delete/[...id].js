@@ -21,13 +21,24 @@ export default function DeleteProductPage() {
     router.push("/products");
   }
 
+  async function deleteProduct() {
+    await axios.delete("/api/products?id=" + id);
+    goBack();
+  }
+
   return (
     <Layout>
-      <h1>Do you really want to delete "{productInfo?.description}"?</h1>
-      <button className="btn-primary">Yes</button>
-      <button onClick={goBack} className="btn-primary">
-        No
-      </button>
+      <h1 className="text-center">
+        Do you really want to delete "{productInfo?.description}"?
+      </h1>
+      <div className="flex gap-2 justify-center">
+        <button className="btn-red" onClick={deleteProduct}>
+          Yes
+        </button>
+        <button onClick={goBack} className="btn-primary">
+          No
+        </button>
+      </div>
     </Layout>
   );
 }
