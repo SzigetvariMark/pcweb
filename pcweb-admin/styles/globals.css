@@ -14,11 +14,11 @@ textarea:focus {
 }
 
 h1 {
-  @apply text-blue-900 mb-2 text-xl;
+  @apply text-blue-900 mb-2 text-xl font-mono;
 }
 
 label {
-  @apply text-blue-900;
+  @apply text-blue-900 font-bold;
 }
 
 .btn-primary {
