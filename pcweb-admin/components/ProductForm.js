@@ -57,14 +57,17 @@ export default function ProductForm({
             value={image}
             onChange={(ev) => handleImageChange(index, ev.target.value)}
           />
+          <img
+            src={image}
+            alt="kepek"
+            className="m-0 max-h-36 max-w-20 bg-slate-400 p-2 rounded-lg mb-2"
+          />
         </div>
       ))}
       <button type="button" className="btn-primary" onClick={handleAddImages}>
         More image
       </button>
-      <div className="mb-2">
-        {!images?.lenght && <div>No photo in this product</div>}
-      </div>
+      <div className="mb-1"></div>
       <label>Product description</label>
       <textarea
         placeholder="description"

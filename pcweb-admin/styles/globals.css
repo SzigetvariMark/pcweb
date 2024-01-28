@@ -18,7 +18,7 @@ h1 {
 }
 
 label {
-  @apply text-blue-900 font-bold;
+  @apply text-blue-900 font-bold mr-2;
 }
 
 .btn-primary {
