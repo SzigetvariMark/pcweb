@@ -24,7 +24,7 @@ label {
 }
 
 .btn-primary {
-  @apply bg-blue-900 text-white px-4 py-1 rounded-xl font-serif;
+  @apply bg-blue-900 text-white px-4 py-1 rounded-xl font-serif hover:brightness-75 duration-100 hover:text-orange-400;
 }
 
 table.basic {

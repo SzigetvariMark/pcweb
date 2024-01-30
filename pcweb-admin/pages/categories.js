@@ -44,12 +44,27 @@ function Categories({ swal }) {
   function deleteCategory(category) {
     swal
       .fire({
-        title: "Example",
-        text: "Hello Word",
-        didOpen: () => {},
-        didClose: () => {},
+        title: "Are you sure?",
+        text: `Do you really want to delete ${category.name}?`,
+        icon: "question",
+        showDenyButton: true,
+        denyButtonText: "Cancel",
+        denyButtonColor: "green",
+        confirmButtonText: "Yes, Delete!",
+        confirmButtonColor: "darkred",
+        reverseButtons: true,
       })
-      .then((result) => {})
+      .then(async (result) => {
+        if (result.isConfirmed) {
+          const { _id } = category;
+          await axios.delete("/api/categories?_id=" + _id);
+          fetchCategories();
+
+          swal.fire("Deleted", "", "success");
+        } else if (result.isDenied) {
+          swal.fire("Nothing was deleted", "", "info");
+        }
+      })
       .catch((error) => {});
   }
 
