@@ -41,7 +41,7 @@ const Nav = () => {
             <Link href="" className="outline_btn">
               Összes termék
             </Link>
-            <Link href="/create-prompt" className="outline_btn">
+            <Link href="/basket" className="outline_btn">
               Kosár (0)
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
