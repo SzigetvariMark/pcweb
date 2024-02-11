@@ -23,13 +23,6 @@ const Nav = () => {
   return (
     <nav className="flex-between w-full pt-4 bg-slate-800 p-6">
       <Link href="/" className="flex gap-2 flex-center">
-        <Image
-          src="/assets/images/lgo.jpeg"
-          alt="Promptopia Logo"
-          width={30}
-          height={30}
-          className="object-contain"
-        />
         <p className="logo_text">Webshop</p>
       </Link>
       <div className="sm:flex" hidden>

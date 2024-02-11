@@ -1,21 +1,17 @@
-const Featured = () => {
+export default function Featured({ featuedProduct }) {
   return (
     <div className="bg-slate-800 px-4 py-14 my-0 text-white">
       <div className="grid grid-cols-2 gap-10">
-        <div className="flex justify-right items-center">
+        <div className="flex flex-col justify-right">
           <div>
             <h1 className=" font-satoshi font-semibold text-6xl text-left mx-0 my-5">
-              Pro anywhere
+              {featuedProduct.title}
             </h1>
-            <p className="text-s text-gray-400">
-            Apple MacBook Air MacBook Air Szárnyaló erő.
-            Legvékonyabb és legkönnyebb laptopunkat teljesen újjávarázsolta az Apple M1 chip ereje. 
-            Akár 3,5-ször gyorsabb CPU-t és akár ötször sebesebb GPU-t rejt. 
-            Az eddigi legfejlettebb Neural Engine-nel akár kilencszer gyorsabb gépi tanulásra képes. 
-            Csendesen működik, ventilátor nélkül, az aksija pedig hosszabb ideig bírja, mint eddig bármelyik MacBook Airé. Ilyen könnyen még soha nem vihettél magaddal egy ekkora teljesítményt nyújtó laptopot.
-            </p>
-            <div className="float-left mt-6 inline-flex">
-              <button className="pointer border-none text-white py-3 px-5 rounded-md text-lg mr-3">
+            <p className="text-s text-gray-400">{featuedProduct.description}</p>
+          </div>
+          <div className="mt-6">
+            <div>
+              <button className="pointer text-white py-3 px-5 rounded-md text-lg mr-3 hover:underline">
                 Read more
               </button>
               <button className="styled_button">
@@ -34,7 +30,7 @@ const Featured = () => {
         </div>
         <div className="flex justify-right items-center">
           <img
-            src="https://raw.githubusercontent.com/SzigetvariMark/pcweb/ef16efed00bf8dfaaf1d722e5192607b74001aa2/webshop/public/img/laptop.png"
+            src={featuedProduct.images}
             alt="Processzor"
             className="rounded-3xl max-h-96 ml-20"
           />
@@ -42,6 +38,4 @@ const Featured = () => {
       </div>
     </div>
   );
-};
-
-export default Featured;
+}
