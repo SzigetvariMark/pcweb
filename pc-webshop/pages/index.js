@@ -1,4 +1,5 @@
 import Featured from "@components/Featured";
+import Footer from "@components/Footer";
 import Nav from "@components/Nav";
 import NewProduct from "@components/NewProduct";
 import Provider from "@components/Provider";
@@ -13,6 +14,7 @@ export default function Home({ featuedProduct, newProduct }) {
         <Featured featuedProduct={featuedProduct} />
       </Provider>
       <NewProduct newProduct={newProduct} />
+      <Footer />
     </>
   );
 }
