@@ -31,7 +31,7 @@ const Nav = () => {
             <Link href="" className="outline_btn">
               Aukció
             </Link>
-            <Link href="" className="outline_btn">
+            <Link href="AllProduct" className="outline_btn">
               Összes termék
             </Link>
             <Link href="/basket" className="outline_btn">
@@ -40,7 +40,7 @@ const Nav = () => {
             <button type="button" onClick={signOut} className="outline_btn">
               Kijelentkezés
             </button>
-            <Link href="profile">
+            <Link href="/Profile">
               <Image
                 src={session?.user.image}
                 width={37}

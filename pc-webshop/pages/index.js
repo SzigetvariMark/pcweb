@@ -5,6 +5,7 @@ import NewProduct from "@components/NewProduct";
 import Provider from "@components/Provider";
 import { mongooseConnect } from "@lib/mongoose";
 import { Product } from "@models/Product";
+import axios from "axios";
 
 export default function Home({ featuedProduct, newProduct }) {
   return (
