@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import { CartContext } from "./CartContext";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -20,6 +21,7 @@ const Nav = () => {
     setUpProviders();
   }, []);
 
+  const { cartProducts } = useContext(CartContext);
   return (
     <nav className="flex-between w-full pt-4 bg-slate-800 p-6">
       <Link href="/" className="flex gap-2 flex-center">
@@ -35,7 +37,7 @@ const Nav = () => {
               Összes termék
             </Link>
             <Link href="/basket" className="outline_btn">
-              Kosár (0)
+              Kosár ({cartProducts.length})
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
               Kijelentkezés

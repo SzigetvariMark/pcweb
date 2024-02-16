@@ -1,4 +1,11 @@
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
 export default function Featured({ featuedProduct }) {
+  const { setCartProducts } = useContext(CartContext);
+  function addFeaturedToCart() {
+    setCartProducts((prev) => [...prev, featuedProduct._id]);
+  }
   return (
     <div className="bg-slate-800 px-4 py-14 my-0 text-white">
       <div className="grid grid-cols-2 gap-10">
@@ -14,7 +21,7 @@ export default function Featured({ featuedProduct }) {
               <button className="pointer text-white py-3 px-5 rounded-md text-lg mr-3 hover:underline">
                 Read more
               </button>
-              <button className="styled_button">
+              <button className="styled_button" onClick={addFeaturedToCart}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

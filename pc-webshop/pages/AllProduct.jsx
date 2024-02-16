@@ -18,9 +18,6 @@ const AllProduct = () => {
 
   return (
     <>
-      <Provider>
-        <Nav />
-      </Provider>
       <h1 className="font-bold bg-slate-700 p-4 rounded-3xl text-yellow-50 text-xl font-satoshi">
         Összes termék
       </h1>
