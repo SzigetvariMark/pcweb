@@ -30,11 +30,17 @@ export default NextAuth({
         });
 
         if (!userExists) {
-          await User.create({
+          const newUser = {
             email: profile.email,
             username: profile.name.replace(" ", "").toLowerCase(),
             image: profile.picture,
-          });
+          };
+
+          if (profile.phone) {
+            newUser.phone = profile.phone;
+          }
+
+          await User.create(newUser);
         }
 
         return true;

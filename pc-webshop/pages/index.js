@@ -1,8 +1,5 @@
 import Featured from "@components/Featured";
-import Footer from "@components/Footer";
-import Nav from "@components/Nav";
 import NewProduct from "@components/NewProduct";
-import Provider from "@components/Provider";
 import { mongooseConnect } from "@lib/mongoose";
 import { Product } from "@models/Product";
 
