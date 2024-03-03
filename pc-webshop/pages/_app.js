@@ -6,11 +6,15 @@ import "@styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="app">
+    <div>
       <CartContextProvider>
         <Provider>
-          <Nav />
-          <Component {...pageProps} />;
+          <header className="shadow-md">
+            <Nav />
+          </header>
+          <div className="main">
+            <Component {...pageProps} />
+          </div>
         </Provider>
         <Footer />
       </CartContextProvider>

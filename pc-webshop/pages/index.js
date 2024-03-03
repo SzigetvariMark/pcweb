@@ -5,10 +5,10 @@ import { Product } from "@models/Product";
 
 export default function Home({ featuedProduct, newProduct }) {
   return (
-    <>
+    <div>
       <Featured featuedProduct={featuedProduct} />
       <NewProduct newProduct={newProduct} />
-    </>
+    </div>
   );
 }
 

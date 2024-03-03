@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { CartContext } from "./CartContext";
+import { Button } from "./ui/button";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -23,26 +24,29 @@ const Nav = () => {
 
   const { cartProducts } = useContext(CartContext);
   return (
-    <nav className="flex-between w-full pt-4 bg-slate-800 p-6">
-      <Link href="/" className="flex gap-2 flex-center">
-        <p className="logo_text sm:hidden md:block">Webshop</p>
-      </Link>
+    <nav className="flex justify-around p-3">
+      <div className="flex items-center hover:text-orange-300 transition-all">
+        <Link href="/" className="flex flex-center">
+          <img src="img/logo.png" alt="logo" className="mr-2" />
+          <h2 className="font-semibold sm:hidden md:block">PC Auctions</h2>
+        </Link>
+      </div>
       <div className="sm:flex sm:flex-none" hidden>
         {session?.user ? (
-          <div className="flex gap-3 md:gap-3">
-            <Link href="" className="outline_btn">
+          <div className="flex gap-4 items-center">
+            <Link href="" className="link">
               Aukció
             </Link>
-            <Link href="AllProduct" className="outline_btn">
+            <Link href="AllProduct" className="link">
               Összes termék
             </Link>
-            <Link href="/basket" className="outline_btn">
+            <Link href="/cart" className="link">
               Kosár ({cartProducts.length})
             </Link>
-            <button type="button" onClick={signOut} className="outline_btn">
+            <Button type="button" onClick={signOut} variant="destructive">
               Kijelentkezés
-            </button>
-            <Link href="/Profile">
+            </Button>
+            <Link href="Profile">
               <Image
                 src={session?.user.image}
                 width={37}
@@ -53,19 +57,23 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <>
+          <div className="flex items-center">
+            <Link href="" className="link">
+              Aukció
+            </Link>
             {providers &&
               Object.values(providers).map((provider) => (
-                <button
+                <Button
+                  variant="outline"
                   type="button"
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
-                  className="black_btn"
+                  className="ml-2"
                 >
                   Bejelentkezés
-                </button>
+                </Button>
               ))}
-          </>
+          </div>
         )}
       </div>
 
@@ -120,7 +128,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign In
+                  Bejelentkezés
                 </button>
               ))}
           </>
