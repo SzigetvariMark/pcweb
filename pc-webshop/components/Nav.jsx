@@ -34,7 +34,7 @@ const Nav = () => {
       <div className="sm:flex sm:flex-none" hidden>
         {session?.user ? (
           <div className="flex gap-4 items-center">
-            <Link href="" className="link">
+            <Link href="auctions" className="link">
               Aukció
             </Link>
             <Link href="AllProduct" className="link">
