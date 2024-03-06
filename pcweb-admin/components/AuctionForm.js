@@ -81,6 +81,8 @@ export default function AuctionForm({
         value={price}
         onChange={(ev) => setPrice(ev.target.value)}
       />
+      <label>When start the auction</label>
+      <input type="date" />
       <button type="submit" className="btn-primary">
         Save
       </button>
