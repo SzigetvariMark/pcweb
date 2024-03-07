@@ -4,9 +4,9 @@ import { FaPenAlt } from "react-icons/fa";
 const Profile = () => {
   const { data: session } = useSession();
   return (
-    <div className="flex gap-60 md:flex-row flex-col p-6 text-white border rounded-lg">
+    <div className="flex gap-60 md:flex-row flex-col p-6 mt-6 shadow-xl border rounded-lg">
       <div>
-        <h3 className=" bg-white/20 text-center rounded-md p-2 mb-4 font-semibold text-2xl">
+        <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
           Alapvető információ
         </h3>
         <div className="flex gap-12">
@@ -35,6 +35,7 @@ const Profile = () => {
             placeholder={session?.user.phone}
             readOnly={"readonly"}
             className="px-2 rounded-md"
+            name="phonenumber"
           />
           <FaPenAlt fontSize={16} className="cursor-pointer" />
         </div>

@@ -16,6 +16,12 @@ const UserSchema = new Schema({
   phone: {
     type: String,
   },
+  address: {
+    type: String,
+  },
+  door: {
+    type: String,
+  },
 });
 
 const User = models.User || model("User", UserSchema);

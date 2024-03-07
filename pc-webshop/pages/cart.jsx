@@ -19,7 +19,12 @@ const cart = () => {
   const router = useRouter();
   const { cartProducts } = useContext(CartContext);
   const [products, setProducts] = useState([]);
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [floor, setFloor] = useState("");
+  const [door, setDoor] = useState("");
   const { data: session } = useSession();
+  const { _id } = router.query;
 
   useEffect(() => {
     if (cartProducts.length > 0) {
@@ -31,6 +36,16 @@ const cart = () => {
 
   function goBack() {
     router.push("/");
+  }
+
+  async function saveInformation() {
+    const data = { phone, address, floor, door, _id: session.user._id };
+    console.log("Data to be sent:", data);
+    try {
+      await axios.patch("/api/cart", data);
+    } catch (error) {
+      console.error("Nem mentet", error);
+    }
   }
 
   return (
@@ -78,7 +93,10 @@ const cart = () => {
         )}
       </div>
       {!!cartProducts?.length && (
-        <div className="bg-white shadow-xl rounded-lg p-8">
+        <form
+          onSubmit={saveInformation}
+          className="bg-white shadow-xl rounded-lg p-8"
+        >
           <h2 className="title text-center">Szállitási információk</h2>
           <Input
             type="text"
@@ -98,23 +116,38 @@ const cart = () => {
             type="number"
             className="mt-4 hover:border-orange-700"
             placeholder="Telefonszám"
+            onChange={(e) => setPhone(e.target.value)}
           />
           <Input
             type="text"
             className="mt-4 hover:border-orange-700"
             placeholder="Cím"
+            onChange={(e) => setAddress(e.target.value)}
           />
           <div className="flex gap-1 mt-4">
-            <Input type="text" placeholder="Emelet" />
-            <Input type="text" className="" placeholder="Ajtó" />
+            <Input
+              type="text"
+              placeholder="Emelet"
+              onChange={(e) => setFloor(e.target.value)}
+            />
+            <Input
+              type="text"
+              className=""
+              placeholder="Ajtó"
+              onChange={(e) => setDoor(e.target.value)}
+            />
           </div>
-          <Button variant="ghost" className="w-full border text-lg mt-5">
+          <Button
+            type="submit"
+            variant="ghost"
+            className="w-full border text-lg mt-5"
+          >
             Tovább a fizetéshez
           </Button>
           <p className="float-right text-xs font-light italic mt-9 text-orange-700">
             *A sárga mezőket kötelező kitölteni!
           </p>
-        </div>
+        </form>
       )}
     </div>
   );
