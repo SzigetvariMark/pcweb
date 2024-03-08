@@ -15,10 +15,10 @@ const AuctionsFeatured = () => {
   }, []);
   return (
     <>
-      <div className="flex gap-64 p-10 items-center rounded-lg mt-10 ">
-        {auctionData.map((items) => (
+      <div className="flex flex-col gap-16 p-10 items-center border-2 rounded-lg shadow-md mt-8 ">
+        {auctionData.map((items, index) => (
           <>
-            <div className="">
+            <div key={index} className="flex items-center gap-40">
               <div>
                 <h2 className="title">{items.title}</h2>
                 <div className="flex gap-4">
@@ -28,8 +28,6 @@ const AuctionsFeatured = () => {
                 </div>
                 <Button className="mt-2">Licitálok</Button>
               </div>
-            </div>
-            <div>
               <button>
                 <img src={items.images} alt="kep" className="w-64" />
               </button>
