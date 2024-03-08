@@ -9,7 +9,7 @@ const AuctionsFeatured = () => {
       try {
         setAuctionData(respone.data);
       } catch (error) {
-        console.log(error);
+        console.log(respone.error);
       }
     });
   }, []);
@@ -31,7 +31,7 @@ const AuctionsFeatured = () => {
             </div>
             <div>
               <button>
-                <img src={items.images} alt="kep" className="w-60" />
+                <img src={items.images} alt="kep" className="w-64" />
               </button>
             </div>
           </>
