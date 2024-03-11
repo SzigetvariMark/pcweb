@@ -17,14 +17,9 @@ import { useSession } from "next-auth/react";
 
 const cart = () => {
   const router = useRouter();
-  const { cartProducts } = useContext(CartContext);
+  const { cartProducts, addProduct, removeProduct } = useContext(CartContext);
   const [products, setProducts] = useState([]);
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [floor, setFloor] = useState("");
-  const [door, setDoor] = useState("");
   const { data: session } = useSession();
-  const { _id } = router.query;
 
   useEffect(() => {
     if (cartProducts.length > 0) {
@@ -38,14 +33,12 @@ const cart = () => {
     router.push("/");
   }
 
-  async function saveInformation() {
-    const data = { phone, address, floor, door, _id: session.user._id };
-    console.log("Data to be sent:", data);
-    try {
-      await axios.patch("/api/cart", data);
-    } catch (error) {
-      console.error("Nem mentet", error);
-    }
+  function moreOfThisProduct(id) {
+    addProduct(id);
+  }
+
+  function lessOfThisProduct(id) {
+    removeProduct(id);
   }
 
   return (
@@ -67,7 +60,7 @@ const cart = () => {
                     <TableHead className="w-[100px]">Termék képe</TableHead>
                     <TableHead>Termék neve</TableHead>
                     <TableHead>Ár</TableHead>
-                    <TableHead className="text-right">Összeg</TableHead>
+                    <TableHead className="text-center">Darab</TableHead>
                   </TableRow>
                 </TableHeader>
                 {products.map((items, index) => (
@@ -77,9 +70,27 @@ const cart = () => {
                         <img src={items.images} alt="kep" />
                       </TableCell>
                       <TableCell>{items.title}</TableCell>
-                      <TableCell>{items.price} Ft</TableCell>
-                      <TableCell className="text-right">
+                      <TableCell>
+                        {cartProducts.filter((id) => id === items._id).length *
+                          items.price}
+                        Ft
+                      </TableCell>
+                      <TableCell className="text-center">
                         {cartProducts.filter((id) => id === items._id).length}
+                      </TableCell>
+                      <TableCell className="text-right flex flex-col gap-1">
+                        <button
+                          className="border text-lg hover:bg-slate-200 transition-all"
+                          onClick={() => moreOfThisProduct(items._id)}
+                        >
+                          +
+                        </button>
+                        <button
+                          className="border text-lg font-semibold hover:bg-red-200 transition-all"
+                          onClick={() => lessOfThisProduct(items._id)}
+                        >
+                          -
+                        </button>
                       </TableCell>
                     </TableRow>
                   </TableBody>
@@ -93,10 +104,7 @@ const cart = () => {
         )}
       </div>
       {!!cartProducts?.length && (
-        <form
-          onSubmit={saveInformation}
-          className="bg-white shadow-xl rounded-lg p-8"
-        >
+        <form className="bg-white shadow-xl rounded-lg p-8">
           <h2 className="title text-center">Szállitási információk</h2>
           <Input
             type="text"
@@ -137,11 +145,7 @@ const cart = () => {
               onChange={(e) => setDoor(e.target.value)}
             />
           </div>
-          <Button
-            type="submit"
-            variant="ghost"
-            className="w-full border text-lg mt-5"
-          >
+          <Button variant="ghost" className="w-full border text-lg mt-5">
             Tovább a fizetéshez
           </Button>
           <p className="float-right text-xs font-light italic mt-9 text-orange-700">
