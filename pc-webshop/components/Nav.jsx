@@ -27,7 +27,6 @@ const Nav = () => {
     <nav className="flex justify-around p-3">
       <div className="flex items-center hover:text-orange-300 transition-all">
         <Link href="/" className="flex flex-center">
-          <img src="img/logo.png" alt="logo" className="mr-2" />
           <h2 className="font-semibold sm:hidden md:block">PC Auctions</h2>
         </Link>
       </div>
