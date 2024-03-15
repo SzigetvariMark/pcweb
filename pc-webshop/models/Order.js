@@ -11,6 +11,10 @@ const OrderSchema = new Schema({
   floor: Number,
   door: Number,
   paid: Boolean,
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "users",
+  },
 });
 
 export const Order = models.Order || model("Order", OrderSchema);

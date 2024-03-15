@@ -50,6 +50,23 @@ const cart = () => {
     removeProduct(id);
   }
 
+  async function goToPayment() {
+    const response = await axios.post("/api/checkout", {
+      name,
+      email,
+      phone,
+      city,
+      address,
+      floor,
+      door,
+      postal,
+      cartProducts,
+    });
+    if (response.data.url) {
+      window.location = response.data.url;
+    }
+  }
+
   let total = 0;
   for (const productId of cartProducts) {
     const price = products.find((p) => p._id === productId)?.price || 0;
@@ -130,11 +147,7 @@ const cart = () => {
         )}
       </div>
       {!!cartProducts?.length && (
-        <form
-          className="bg-white shadow-xl rounded-lg p-8"
-          method="post"
-          action="/api/checkout"
-        >
+        <div className="bg-white shadow-xl rounded-lg p-8">
           <h2 className="title text-center">Szállitási információk</h2>
           <Input
             type="text"
@@ -201,18 +214,17 @@ const cart = () => {
               onChange={(e) => setDoor(e.target.value)}
             />
           </div>
-          <input type="hidden" name="products" value={cartProducts.join(",")} />
           <Button
             variant="ghost"
             className="w-full border text-lg mt-5"
-            type="submit"
+            onClick={goToPayment}
           >
             Tovább a fizetéshez
           </Button>
           <p className="float-right text-xs font-light italic mt-9 text-orange-700">
             *A sárga mezőket kötelező kitölteni!
           </p>
-        </form>
+        </div>
       )}
     </div>
   );

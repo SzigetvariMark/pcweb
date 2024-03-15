@@ -1,6 +1,7 @@
 import { mongooseConnect } from "@lib/mongoose";
 import { Order } from "@models/Order";
 import { Product } from "@models/Product";
+const stripe = require("stripe")(process.env.STRIPE_SK);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -8,9 +9,18 @@ export default async function handler(req, res) {
     return;
   }
   await mongooseConnect();
-  const { name, email, phone, city, address, floor, door, postal, products } =
-    req.body;
-  const productsIds = products.split(",");
+  const {
+    name,
+    email,
+    phone,
+    city,
+    address,
+    floor,
+    door,
+    postal,
+    cartProducts,
+  } = req.body;
+  const productsIds = cartProducts;
   const uniqueIds = [...new Set(productsIds)];
   const productsInfos = await Product.find({ _id: uniqueIds });
 
@@ -22,9 +32,9 @@ export default async function handler(req, res) {
       line_items.push({
         quantity,
         price_data: {
-          currency: "hu-HU",
+          currency: "huf",
           product_data: { name: info.title },
-          unit_amount: quantity * info.price,
+          unit_amount: quantity * info.price * 100,
         },
       });
     }
@@ -40,5 +50,18 @@ export default async function handler(req, res) {
     door,
     postal,
     paid: false,
+  });
+
+  const session = await stripe.checkout.sessions.create({
+    line_items,
+    mode: "payment",
+    customer_email: email,
+    success_url: process.env.NEXTAUTH_URL + "/cart?success=1",
+    cancel_url: process.env.NEXTAUTH_URL + "/cart?canceled=1",
+    metadata: { orderId: orderDoc._id.toString() },
+  });
+
+  res.json({
+    url: session.url,
   });
 }
