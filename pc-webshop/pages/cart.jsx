@@ -74,7 +74,7 @@ const cart = () => {
   }
 
   return (
-    <div className="gap-12 grid grid-cols-3 w-full mt-10">
+    <div className="gap-12 grid grid-cols-2 w-full mt-10 md:grid-cols-3">
       <div className="col-span-2 bg-white shadow-xl rounded-lg p-8">
         {!cartProducts?.length && (
           <div>

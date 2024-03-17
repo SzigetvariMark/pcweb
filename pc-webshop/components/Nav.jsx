@@ -36,7 +36,7 @@ const Nav = () => {
             <Link href="auctions" className="link">
               Aukció
             </Link>
-            <Link href="AllProduct" className="link">
+            <Link href="products" className="link">
               Összes termék
             </Link>
             <Link href="/cart" className="link">
