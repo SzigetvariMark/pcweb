@@ -16,4 +16,11 @@ A projektünk célja, hogy minél szélesebb vásárlói kört elérjünk, rész
 - eslint: 8
 - tailwindcss: 3.3.0
 
-## installation
+## Setup
+
+A projekt futtatásához telepítse helyileg az npm használatával:
+
+```
+ $ npm install
+ $ npm run dev
+```
