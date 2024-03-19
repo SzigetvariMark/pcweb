@@ -16,6 +16,12 @@ A projektünk célja, hogy minél szélesebb vásárlói kört elérjünk, rész
 - eslint: 8
 - tailwindcss: 3.3.0
 
+## installation
+
+```
+ $ git clone https://github.com/SzigetvariMark/pcweb.git
+```
+
 ## Setup
 
 A projekt futtatásához telepítse helyileg az npm használatával:
