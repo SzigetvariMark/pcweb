@@ -30,3 +30,11 @@ A projekt futtatásához telepítse helyileg az npm használatával:
  $ npm install
  $ npm run dev
 ```
+
+A projektünk használatához szükséges saját fiókok és a linkeket be kell helyezni a .env.example fájl-ba:
+
+```
+ $ stripe fiók
+ $ mongodb fiók
+ $ Google Cloud fiók
+```
