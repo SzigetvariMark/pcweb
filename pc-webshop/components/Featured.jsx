@@ -1,12 +1,19 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Button } from "./ui/button";
+import { useRouter } from "next/router";
 
 export default function Featured({ featuedProduct }) {
+  const router = useRouter();
   const { addProduct } = useContext(CartContext);
   function addFeaturedToCart() {
     addProduct(featuedProduct._id);
   }
+
+  function goToSingle() {
+    router.push("/product/" + featuedProduct._id);
+  }
+
   return (
     <div className="px-4 py-6 my-0 text-black font-semibold">
       <div className="grid grid-cols-2 gap-10">
@@ -21,7 +28,9 @@ export default function Featured({ featuedProduct }) {
           </div>
           <div className="mt-6">
             <div className="sm:flex sm:p-2">
-              <Button variant="link">Read more</Button>
+              <Button variant="link" onClick={goToSingle}>
+                Read more
+              </Button>
               <Button variant="default" onClick={addFeaturedToCart}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

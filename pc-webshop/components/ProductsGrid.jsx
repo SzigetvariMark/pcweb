@@ -3,7 +3,7 @@ import ProductBox from "./ProductBox";
 
 const ProductsGrid = ({ products }) => {
   return (
-    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 pt-5">
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 pt-5 shadow-2xl rounded-2xl">
       {products.map((items, index) => (
         <ProductBox key={index} {...items} />
       ))}
