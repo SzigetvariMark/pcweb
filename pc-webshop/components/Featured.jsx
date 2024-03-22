@@ -15,14 +15,14 @@ export default function Featured({ featuedProduct }) {
   }
 
   return (
-    <div className="px-4 py-6 my-0 text-black font-semibold">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="px-4 py-6 my-0 text-black font-semibold max-md:shadow-md max-md:border-2 max-md:rounded-lg max-md:m-4">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
         <div className="flex flex-col justify-right">
           <div>
-            <h1 className=" font-satoshi font-semibold text-6xl text-left mx-0 my-5">
+            <h1 className="font-satoshi font-semibold text-6xl text-left mx-0 my-5 max-md:text-center">
               {featuedProduct.title}
             </h1>
-            <p className="text-s text-black/55 md:block sm:hidden">
+            <p className="text-s max-md:truncate text-black/55">
               {featuedProduct.description}
             </p>
           </div>
@@ -45,11 +45,11 @@ export default function Featured({ featuedProduct }) {
             </div>
           </div>
         </div>
-        <div className="flex justify-right items-center">
+        <div className="flex justify-right items-center max-md:justify-center ">
           <img
             src={featuedProduct.images}
             alt="Processzor"
-            className="rounded-3xl max-h-96 ml-20"
+            className="rounded-3xl max-h-96 ml-20 max-xl:max-h-72 max-lg:max-h-52"
           />
         </div>
       </div>
