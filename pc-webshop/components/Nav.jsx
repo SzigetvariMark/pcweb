@@ -83,7 +83,7 @@ const Nav = () => {
               src={session?.user.image}
               width={37}
               height={37}
-              className="rounded-full"
+              className="rounded-full cursor-pointer"
               alt="profile"
               onClick={() => setToggleDropdown((prev) => !prev)}
             />
@@ -91,20 +91,34 @@ const Nav = () => {
             {toggleDropdown && (
               <div className="dropdown">
                 <Link
-                  href="/profile"
+                  href="Profile"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Profilom
                 </Link>
                 <Link
-                  href="/create-prompt"
+                  href="cart"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Kosár
                 </Link>
-                <button
+                <Link
+                  href="products"
+                  className="dropdown_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  Ősszes termék
+                </Link>
+                <Link
+                  href="auctions"
+                  className="dropdown_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  Aukció
+                </Link>
+                <Button
                   type="button"
                   onClick={() => {
                     setToggleDropdown(false);
@@ -113,7 +127,7 @@ const Nav = () => {
                   className="mt-5 w-full black_btn"
                 >
                   Kijelentkezés
-                </button>
+                </Button>
               </div>
             )}
           </div>

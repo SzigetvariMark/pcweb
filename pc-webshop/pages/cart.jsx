@@ -73,8 +73,8 @@ const cart = () => {
   }
 
   return (
-    <div className="gap-12 grid grid-cols-2 w-full mt-10 md:grid-cols-3">
-      <div className="col-span-2 bg-white shadow-xl rounded-lg p-8">
+    <div className="container gap-12 grid grid-cols-3 w-full mt-10 max-md:grid-cols-1">
+      <div className="col-span-2 bg-white shadow-md border-2 rounded-lg p-8">
         {!cartProducts?.length && (
           <div>
             <p className="title">Üres a kosarad</p>
@@ -146,7 +146,7 @@ const cart = () => {
         )}
       </div>
       {!!cartProducts?.length && (
-        <div className="bg-white shadow-xl rounded-lg p-8">
+        <div className="bg-white shadow-md border-2 rounded-lg p-8 w-full">
           <h2 className="title text-center">Szállitási információk</h2>
           <Input
             type="text"
@@ -215,7 +215,7 @@ const cart = () => {
           </div>
           <Button
             variant="ghost"
-            className="w-full border text-lg mt-5"
+            className="w-full border text-lg mt-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:text-gray-50"
             onClick={goToPayment}
           >
             Tovább a fizetéshez
