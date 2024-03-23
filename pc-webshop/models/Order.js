@@ -1,4 +1,4 @@
-const { Schema, models, model } = require("mongoose");
+import mongoose, { Schema, model, models } from "mongoose";
 
 const OrderSchema = new Schema({
   line_items: Object,
@@ -11,9 +11,9 @@ const OrderSchema = new Schema({
   floor: Number,
   door: Number,
   paid: Boolean,
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "users",
+  userId: {
+    type: mongoose.Types.ObjectId,
+    ref: "User",
   },
 });
 

@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     return;
   }
   await mongooseConnect();
+
   const {
     name,
     email,
@@ -19,7 +20,9 @@ export default async function handler(req, res) {
     door,
     postal,
     cartProducts,
+    userId,
   } = req.body;
+
   const productsIds = cartProducts;
   const uniqueIds = [...new Set(productsIds)];
   const productsInfos = await Product.find({ _id: uniqueIds });
@@ -28,6 +31,7 @@ export default async function handler(req, res) {
   for (const productId of uniqueIds) {
     const info = productsInfos.find((p) => p._id.toString() === productId);
     const quantity = productsIds.filter((id) => id === productId)?.length || 0;
+
     if (quantity > 0 && info) {
       line_items.push({
         quantity,
@@ -50,6 +54,7 @@ export default async function handler(req, res) {
     door,
     postal,
     paid: false,
+    userId,
   });
 
   const session = await stripe.checkout.sessions.create({
