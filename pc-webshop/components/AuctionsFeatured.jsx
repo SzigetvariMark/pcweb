@@ -1,9 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const AuctionsFeatured = ({ _id, title, price, images }) => {
-  const [auctionData, setAuctionData] = useState([]);
+const AuctionsFeatured = ({ _id, title, price, images, endDate }) => {
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+
+  function calculateTimeRemaining() {
+    const endTime = new Date(endDate).getTime();
+    const now = new Date().getTime();
+    return Math.max(0, endTime - now);
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeRemaining(calculateTimeRemaining());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
   const url = "/auction/" + _id;
   return (
     <>
@@ -14,7 +36,12 @@ const AuctionsFeatured = ({ _id, title, price, images }) => {
             <div className="flex gap-4">
               <p>{price}Ft</p>
               <p>4 licit</p>
-              <p>3óra 12perc</p>
+              <div>
+                <p>
+                  {days} nap {hours} óra {minutes} perc {seconds} másodperc
+                  maradt hátra
+                </p>
+              </div>
             </div>
             <Link href={url}>
               <Button className="mt-2">Licitálok</Button>
