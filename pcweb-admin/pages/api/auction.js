@@ -14,12 +14,13 @@ export default async function handle(req, res) {
   }
 
   if (method === "POST") {
-    const { title, description, price, images } = req.body;
+    const { title, description, price, images, endDate } = req.body;
     const AuctionDoc = await Auction.create({
       title,
       description,
       price,
       images,
+      endDate,
     });
     res.json(AuctionDoc);
   }

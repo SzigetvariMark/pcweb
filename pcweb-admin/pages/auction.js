@@ -66,7 +66,7 @@ export default function auction() {
         </tbody>
       </table>
       <Link className="btn-primary" href={"/auction/new"}>
-        Add new product
+        Add new Auction
       </Link>
     </Layout>
   );

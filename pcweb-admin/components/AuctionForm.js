@@ -13,8 +13,10 @@ export default function AuctionForm({
   const [description, setDescription] = useState(existingDescription || "");
   const [price, setPrice] = useState(existingPrice || "");
   const [goToProducts, setGoToProducts] = useState(false);
-  const router = useRouter();
   const [images, setImages] = useState(existingImages || [""]);
+  const [endDate, setEndDate] = useState("");
+
+  const router = useRouter();
 
   const handleImageChange = (index, value) => {
     const newImages = [...images];
@@ -28,7 +30,7 @@ export default function AuctionForm({
 
   async function saveAuction(ev) {
     ev.preventDefault();
-    const data = { title, description, price, images: images || [] };
+    const data = { title, description, price, endDate, images: images || [] };
     if (_id) {
       await axios.put("/api/auction", { ...data, _id });
     } else {
@@ -56,6 +58,7 @@ export default function AuctionForm({
             placeholder="auction images"
             value={image}
             onChange={(ev) => handleImageChange(index, ev.target.value)}
+            className="mb-2"
           />
           <img
             src={image}
@@ -81,8 +84,12 @@ export default function AuctionForm({
         value={price}
         onChange={(ev) => setPrice(ev.target.value)}
       />
-      <label>When start the auction</label>
-      <input type="date" />
+      <label>When will be the end of the auction</label>
+      <input
+        type="date"
+        className="mb-2"
+        onChange={(ev) => setEndDate(ev.target.value)}
+      />
       <button type="submit" className="btn-primary">
         Save
       </button>
