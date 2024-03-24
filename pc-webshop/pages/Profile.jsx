@@ -1,16 +1,12 @@
 import { Button } from "@components/ui/button";
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaPenAlt } from "react-icons/fa";
 
 const Profile = () => {
   const { data: session } = useSession();
-  const [city, setCity] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [postalCode, setPostalCode] = useState("");
-  const [floor, setFloor] = useState("");
-  const [door, setDoor] = useState("");
   const [deliveryInformation, setDeliveryInformation] = useState([]);
 
   useEffect(() => {
@@ -22,8 +18,6 @@ const Profile = () => {
       console.log(response.error);
     }
   }, []);
-
-  function saveDeliveryInformation(event) {}
 
   return (
     <div className="flex-col">
@@ -68,54 +62,9 @@ const Profile = () => {
           <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
             Szállitási információ
           </h3>
-          <form onSubmit={saveDeliveryInformation}>
-            <div className="flex gap-12 items-center">
-              <p>Város:</p>
-              <input
-                type="text"
-                value={city}
-                placeholder="Város"
-                onChange={(ev) => setCity(ev.target.value)}
-              />
-            </div>
-            <div className="flex gap-12 items-center mt-4">
-              <p>Telefonszám:</p>
-              <input
-                type="tel"
-                value={phoneNumber}
-                placeholder="Telefonszám"
-                onChange={(ev) => setPhoneNumber(ev.target.value)}
-              />
-            </div>
-            <div className="flex gap-12 items-center mt-4">
-              <h2>Irányitószám:</h2>
-              <input
-                type="Number"
-                value={postalCode}
-                placeholder="Irányitószám"
-                onChange={(ev) => setPostalCode(ev.target.value)}
-              />
-            </div>
-            <div className="flex gap-2 items-center mt-4">
-              <h2>Emelet:</h2>
-              <input
-                type="text"
-                value={floor}
-                placeholder="Emelet"
-                onChange={(ev) => setFloor(ev.target.value)}
-              />
-              <h2>Ajtó:</h2>
-              <input
-                type="text"
-                value={door}
-                placeholder="Ajtó szám"
-                onChange={(ev) => setDoor(ev.target.value)}
-              />
-            </div>
-            <Button type="submit" className="float-end mt-2">
-              Mentés
-            </Button>
-          </form>
+          <Link href={"/profile/new"} className="border-2 rounded-md p-2">
+            Adj hozzá a szállitási információt
+          </Link>
         </div>
       </div>
       <div className="shadow-xl border rounded-lg p-4 mt-6">
