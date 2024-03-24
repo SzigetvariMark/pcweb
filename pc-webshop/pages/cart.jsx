@@ -78,6 +78,7 @@ const cart = () => {
         {!cartProducts?.length && (
           <div>
             <p className="title">Üres a kosarad</p>
+            <img src="/img/hippo-empty-cart.png" alt="kep" />
           </div>
         )}
         {products?.length > 0 && (
