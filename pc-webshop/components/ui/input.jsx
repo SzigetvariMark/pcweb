@@ -3,7 +3,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const Input = React.forwardRef(
-  ({ className, type, onChange, ...props }, ref) => {
+  ({ className, type, value, onChange, ...props }, ref) => {
     return (
       <input
         type={type}
@@ -14,6 +14,7 @@ const Input = React.forwardRef(
         ref={ref}
         {...props}
         onChange={onChange}
+        value={value}
       />
     );
   }

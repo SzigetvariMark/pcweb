@@ -1,39 +1,29 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
-import axios from "axios";
+import Link from "next/link";
 
-const AuctionsFeatured = () => {
+const AuctionsFeatured = ({ _id, title, price, images }) => {
   const [auctionData, setAuctionData] = useState([]);
-  useEffect(() => {
-    axios.get("/api/auction").then((respone) => {
-      try {
-        setAuctionData(respone.data);
-      } catch (error) {
-        console.log(respone.error);
-      }
-    });
-  }, []);
+  const url = "/auction/" + _id;
   return (
     <>
       <div className="flex flex-col gap-16 p-10 items-center border-2 rounded-lg shadow-md mt-8 ">
-        {auctionData.map((items, index) => (
-          <>
-            <div key={index} className="flex items-center gap-40">
-              <div>
-                <h2 className="title">{items.title}</h2>
-                <div className="flex gap-4">
-                  <p>{items.price}Ft</p>
-                  <p>4 licit</p>
-                  <p>3óra 12perc</p>
-                </div>
-                <Button className="mt-2">Licitálok</Button>
-              </div>
-              <button>
-                <img src={items.images} alt="kep" className="w-64" />
-              </button>
+        <div className="flex items-center gap-40">
+          <div>
+            <h2 className="title">{title}</h2>
+            <div className="flex gap-4">
+              <p>{price}Ft</p>
+              <p>4 licit</p>
+              <p>3óra 12perc</p>
             </div>
-          </>
-        ))}
+            <Link href={url}>
+              <Button className="mt-2">Licitálok</Button>
+            </Link>
+          </div>
+          <Link href={url}>
+            <img src={images[0]} alt="kep" className="w-64" />
+          </Link>
+        </div>
       </div>
     </>
   );
