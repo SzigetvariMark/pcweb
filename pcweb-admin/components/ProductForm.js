@@ -70,6 +70,7 @@ export default function ProductForm({
             placeholder="product images"
             value={image}
             onChange={(ev) => handleImageChange(index, ev.target.value)}
+            className="mb-2"
           />
           <img
             src={image}
@@ -94,6 +95,7 @@ export default function ProductForm({
         placeholder="price"
         value={price}
         onChange={(ev) => setPrice(ev.target.value)}
+        className="mb-2"
       />
       <button type="submit" className="btn-primary">
         Save

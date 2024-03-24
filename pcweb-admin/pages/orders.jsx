@@ -26,11 +26,11 @@ export default function Orders() {
       Orders
       <div>
         <Table>
-          <TableCaption>A list of your recent invoices.</TableCaption>
+          <TableCaption></TableCaption>
           <TableHeader>
             <TableRow>
               <TableHead className="w-[100px]">Name</TableHead>
-              <TableHead>PhoneNumber</TableHead>
+              <TableHead>Phonenumber</TableHead>
               <TableHead>Email</TableHead>
               <TableHead>City</TableHead>
               <TableHead>Address</TableHead>
@@ -51,7 +51,6 @@ export default function Orders() {
                 <TableCell>{items.postal}</TableCell>
                 <TableCell>{items.floor}</TableCell>
                 <TableCell>{items.door}</TableCell>
-                <TableCell>{items.line_items}</TableCell>
               </TableRow>
             </TableBody>
           ))}

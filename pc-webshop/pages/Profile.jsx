@@ -1,7 +1,6 @@
 import { Button } from "@components/ui/button";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaPenAlt } from "react-icons/fa";
 
@@ -55,16 +54,6 @@ const Profile = () => {
           <div>
             <h1 className="mt-2">{session?.user.name}</h1>
           </div>
-        </div>
-      </div>
-      <div className="flex shadow-xl border rounded-lg p-4 mt-6">
-        <div>
-          <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
-            Szállitási információ
-          </h3>
-          <Link href={"/profile/new"} className="border-2 rounded-md p-2">
-            Adj hozzá a szállitási információt
-          </Link>
         </div>
       </div>
       <div className="shadow-xl border rounded-lg p-4 mt-6">

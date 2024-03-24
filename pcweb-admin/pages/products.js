@@ -12,10 +12,7 @@ export default function Products() {
   }, []);
   return (
     <Layout>
-      <Link className="btn-primary" href={"/products/new"}>
-        Add new product
-      </Link>
-      <table className="basic mt-2">
+      <table className="basic mb-6">
         <thead>
           <tr>
             <td>Product name</td>
@@ -27,7 +24,10 @@ export default function Products() {
             <tr>
               <td>{product.title}</td>
               <td>
-                <Link href={"/products/edit/" + product._id}>
+                <Link
+                  href={"/products/edit/" + product._id}
+                  className="btn-primary"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -44,7 +44,10 @@ export default function Products() {
                   </svg>
                   Edit
                 </Link>
-                <Link href={"/products/delete/" + product._id}>
+                <Link
+                  href={"/products/delete/" + product._id}
+                  className="btn-primary"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -66,6 +69,9 @@ export default function Products() {
           ))}
         </tbody>
       </table>
+      <Link className="btn-primary" href={"/products/new"}>
+        Add new product
+      </Link>
     </Layout>
   );
 }

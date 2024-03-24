@@ -14,10 +14,7 @@ export default function auction() {
 
   return (
     <Layout>
-      <Link className="btn-primary" href={"/auction/new"}>
-        Add new product
-      </Link>
-      <table className="basic mt-2">
+      <table className="basic mb-6">
         <thead>
           <tr>
             <td>Auction name</td>
@@ -68,6 +65,9 @@ export default function auction() {
           ))}
         </tbody>
       </table>
+      <Link className="btn-primary" href={"/auction/new"}>
+        Add new product
+      </Link>
     </Layout>
   );
 }

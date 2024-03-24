@@ -4,12 +4,12 @@ import { useRouter } from "next/router";
 
 export default function Nav() {
   const inactiveLink = "flex gap-1 p-1";
-  const activeLink = inactiveLink + " bg-white text-blue-900 rounded-lg";
+  const activeLink = inactiveLink + " bg-white text-orange-900 rounded-lg";
   const router = useRouter();
   const { pathname } = router;
 
   return (
-    <aside className="text-white p-4 pr-2">
+    <aside className="text-white font-semibold p-4 pr-2">
       <Link href={"/"} className="flex gap-1 mb-4 mr-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
