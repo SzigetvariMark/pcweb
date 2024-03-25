@@ -3,6 +3,7 @@ import { Button } from "@components/ui/button";
 import { Input } from "@components/ui/input";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 import React, { useContext, useEffect, useState } from "react";
 import {
   Table,
@@ -16,6 +17,7 @@ import {
 
 const cart = () => {
   const router = useRouter();
+  const { data: session } = useSession();
   const { cartProducts, addProduct, removeProduct } = useContext(CartContext);
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
@@ -60,11 +62,14 @@ const cart = () => {
       door,
       postal,
       cartProducts,
+      userId: session?.user.id,
     });
     if (response.data.url) {
       window.location = response.data.url;
     }
   }
+
+  console.log(session?.user.id);
 
   let total = 0;
   for (const productId of cartProducts) {
