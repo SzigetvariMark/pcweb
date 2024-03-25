@@ -1,4 +1,5 @@
 import { mongooseConnect } from "@lib/mongoose";
+import { Order } from "@models/Order";
 import { Product } from "@models/Product";
 
 export default async function handle(req, res) {
@@ -35,9 +36,8 @@ export default async function handle(req, res) {
   }
 
   if (method === "DELETE") {
-    if (req.query?.id) {
-      await Product.deleteOne({ _id: req.query.id });
-      res.json(true);
-    }
+    const { _id } = req.query;
+    await Order.deleteOne({ _id });
+    res.json("ok");
   }
 }

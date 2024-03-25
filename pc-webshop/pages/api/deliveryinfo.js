@@ -22,4 +22,11 @@ export default async function handle(req, res) {
       return res.json(orders);
     }
   }
+
+  if (method === "DELETE") {
+    if (req.query?.id) {
+      await Order.deleteOne({ _id: req.query.id });
+      res.json(true);
+    }
+  }
 }

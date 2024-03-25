@@ -1,22 +1,53 @@
 import { Button } from "@components/ui/button";
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaPenAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
 
-const Profile = () => {
+const Profile = ({ swal }) => {
   const { data: session } = useSession();
   const [deliveryInformation, setDeliveryInformation] = useState([]);
 
   useEffect(() => {
-    try {
-      axios.get("/api/deliveryinfo").then((response) => {
-        setDeliveryInformation(response.data);
-      });
-    } catch (error) {
-      console.log(response.error);
-    }
+    fetchCategories();
   }, []);
+  function fetchCategories() {
+    axios.get("/api/deliveryinfo").then((result) => {
+      setDeliveryInformation(result.data);
+    });
+  }
+
+  async function deleteOrder(items) {
+    Swal.fire({
+      title: "Biztos vagy benne?",
+      text: `Biztos törli a rendelését ${items.city}?`,
+      imageUrl:
+        "https://raw.githubusercontent.com/joschan21/digitalhippo/master/public/hippo-email-sent.png",
+      imageHeight: "300",
+      showDenyButton: true,
+      denyButtonText: "Nem",
+      denyButtonColor: "green",
+      confirmButtonText: "Igen, Törlöm!",
+      confirmButtonColor: "darkred",
+      reverseButtons: true,
+    })
+      .then(async (result) => {
+        if (result.isConfirmed) {
+          const { _id } = order;
+          await axios.delete("/api/deliveryinfo?_id=" + _id);
+          fetchCategories();
+
+          swal.fire("Törlés", "", "Sikeres!");
+        } else if (result.isDenied) {
+          swal.fire("Nem let törölve a rendelése", "", "info");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <div className="flex-col">
@@ -102,7 +133,11 @@ const Profile = () => {
                   className="px-2 rounded-md text-black"
                   placeholder={items.door}
                 />
-                <Button variant="destructive" className="float-right">
+                <Button
+                  variant="destructive"
+                  className="float-right"
+                  onClick={() => deleteOrder(items)}
+                >
                   Törlés
                 </Button>
               </div>
