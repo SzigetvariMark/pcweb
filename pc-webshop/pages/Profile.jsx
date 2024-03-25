@@ -11,18 +11,18 @@ const Profile = ({ swal }) => {
   const [deliveryInformation, setDeliveryInformation] = useState([]);
 
   useEffect(() => {
-    fetchCategories();
+    fetchOrders();
   }, []);
-  function fetchCategories() {
+  function fetchOrders() {
     axios.get("/api/deliveryinfo").then((result) => {
       setDeliveryInformation(result.data);
     });
   }
 
-  async function deleteOrder(items) {
+  async function deleteOrder(orderId) {
     Swal.fire({
       title: "Biztos vagy benne?",
-      text: `Biztos törli a rendelését ${items.city}?`,
+      text: `Biztos törli a rendelését?`,
       imageUrl:
         "https://raw.githubusercontent.com/joschan21/digitalhippo/master/public/hippo-email-sent.png",
       imageHeight: "300",
@@ -35,13 +35,12 @@ const Profile = ({ swal }) => {
     })
       .then(async (result) => {
         if (result.isConfirmed) {
-          const { _id } = order;
-          await axios.delete("/api/deliveryinfo?_id=" + _id);
-          fetchCategories();
+          await axios.delete(`/api/deliveryinfo?id=${orderId}`);
+          fetchOrders();
 
-          swal.fire("Törlés", "", "Sikeres!");
+          Swal.fire("Törlés", "", "Sikeres!");
         } else if (result.isDenied) {
-          swal.fire("Nem let törölve a rendelése", "", "info");
+          Swal.fire("Nem let törölve a rendelése", "", "info");
         }
       })
       .catch((error) => {
@@ -136,7 +135,7 @@ const Profile = ({ swal }) => {
                 <Button
                   variant="destructive"
                   className="float-right"
-                  onClick={() => deleteOrder(items)}
+                  onClick={() => deleteOrder(items._id)}
                 >
                   Törlés
                 </Button>
