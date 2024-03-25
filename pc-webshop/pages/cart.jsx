@@ -69,8 +69,6 @@ const cart = () => {
     }
   }
 
-  console.log(session?.user.id);
-
   let total = 0;
   for (const productId of cartProducts) {
     const price = products.find((p) => p._id === productId)?.price || 0;
