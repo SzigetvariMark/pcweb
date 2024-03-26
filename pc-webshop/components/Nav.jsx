@@ -88,28 +88,28 @@ const Nav = () => {
             {toggleDropdown && (
               <div className="dropdown">
                 <Link
-                  href="Profile"
+                  href="/Profile"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Profilom
                 </Link>
                 <Link
-                  href="cart"
+                  href="/cart"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Kosár
                 </Link>
                 <Link
-                  href="products"
+                  href="/products"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Ősszes termék
                 </Link>
                 <Link
-                  href="auctions"
+                  href="/auctions"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
