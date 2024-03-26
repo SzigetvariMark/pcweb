@@ -1,13 +1,16 @@
 import Featured from "@components/Featured";
+import NewAuction from "@components/NewAuction";
 import NewProduct from "@components/NewProduct";
 import { mongooseConnect } from "@lib/mongoose";
+import { Auction } from "@models/AuctionProduct";
 import { Product } from "@models/Product";
 
-export default function Home({ featuedProduct, products }) {
+export default function Home({ featuedProduct, products, auctions }) {
   return (
     <div>
       <Featured featuedProduct={featuedProduct} />
       <NewProduct products={products} />
+      <NewAuction auctions={auctions} />
     </div>
   );
 }
@@ -20,10 +23,15 @@ export async function getServerSideProps() {
     sort: { _id: -1 },
     limit: 9,
   });
+  const auctions = await Auction.find({}, null, {
+    sort: { _id: -1 },
+    limit: 3,
+  });
   return {
     props: {
       featuedProduct: JSON.parse(JSON.stringify(featuedProduct)),
       products: JSON.parse(JSON.stringify(products)),
+      auctions: JSON.parse(JSON.stringify(auctions)),
     },
   };
 }
