@@ -1,12 +1,11 @@
 import { Button } from "@components/ui/button";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaPenAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-const Profile = ({ swal }) => {
+const Profile = () => {
   const { data: session } = useSession();
   const [deliveryInformation, setDeliveryInformation] = useState([]);
 
@@ -91,47 +90,35 @@ const Profile = ({ swal }) => {
           <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
             Rendelési Információk
           </h3>
-          <div>
+          <div className="max-xl:flex max-xl:gap-4 max-xl:justify-center max-xl:items-center">
             {deliveryInformation.map((items, index) => (
               <div
                 key={index}
-                className="flex mb-2 items-center max-xl:flex-col"
+                className="flex justify-between mb-2 items-center max-xl:flex-col max-xl:gap-2 max-xl:items-start "
               >
-                <p>Város</p>
-                <input
-                  type="text"
-                  readOnly={"readonly"}
-                  className="px-2 rounded-md text-black"
-                  placeholder={items.city}
-                />
-                <p>Cim</p>
-                <input
-                  type="text"
-                  readOnly={"readonly"}
-                  className="px-2 rounded-md text-black"
-                  placeholder={items.address}
-                />
-                <p>Irányitószám</p>
-                <input
-                  type="text"
-                  readOnly={"readonly"}
-                  className="px-2 rounded-md text-black"
-                  placeholder={items.postal}
-                />
-                <p>Emelet</p>
-                <input
-                  type="text"
-                  readOnly={"readonly"}
-                  className="px-2 rounded-md text-black"
-                  placeholder={items.floor}
-                />
-                <p>Ajtó</p>
-                <input
-                  type="text"
-                  readOnly={"readonly"}
-                  className="px-2 rounded-md text-black"
-                  placeholder={items.door}
-                />
+                <div className="max-xl:flex max-xl:items-center">
+                  <p className="Title2">Város:</p>
+                  <label className="font-light">{items.city}</label>
+                </div>
+                <div className="max-xl:flex max-xl:items-center">
+                  <p className="Title2">Cim:</p>
+                  <label className="font-light">{items.address}</label>
+                </div>
+                <div className="max-xl:flex max-xl:items-center">
+                  <p className="Title2">Irányitószám:</p>
+                  <label className="font-light">{items.postal}</label>
+                </div>
+                <div className="max-xl:flex max-xl:items-center">
+                  <p className="Title2">Emelet:</p>
+                  <label className="font-light">{items.floor}</label>
+                </div>
+                <div className="max-xl:flex max-xl:items-center">
+                  <p className="Title2">Ajtó:</p>
+                  <label className="font-light">{items.door}</label>
+                </div>
+                <div className="max-xl:flex-col max-xl:items-center">
+                  <p className="Title2">Amiket rendelt:</p>
+                </div>
                 <Button
                   variant="destructive"
                   className="float-right"

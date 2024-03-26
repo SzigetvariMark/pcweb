@@ -14,6 +14,10 @@
   @apply font-serif font-bold text-2xl;
 }
 
+.Title2 {
+  @apply font-semibold text-lg flex mr-2
+}
+
 .dropdown {
   @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg border-2 z-10 bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
 }
