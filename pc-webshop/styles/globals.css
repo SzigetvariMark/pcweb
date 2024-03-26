@@ -10,6 +10,10 @@
   @apply hover:bg-blue-400/45 rounded-xl hover:text-black hover:font-semibold p-2 mx-2 transition-all;
 }
 
+.profileOrderList {
+  @apply max-lg:flex max-lg:items-center
+}
+
 .title {
   @apply font-serif font-bold text-2xl;
 }
