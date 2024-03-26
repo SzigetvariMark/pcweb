@@ -33,10 +33,10 @@ const Nav = () => {
       <div className="sm:flex sm:flex-none" hidden>
         {session?.user ? (
           <div className="flex gap-4 items-center">
-            <Link href="auctions" className="link">
+            <Link href="/auctions" className="link">
               Aukció
             </Link>
-            <Link href="products" className="link">
+            <Link href="/products" className="link">
               Összes termék
             </Link>
             <Link href="/cart" className="link">
@@ -45,7 +45,7 @@ const Nav = () => {
             <Button type="button" onClick={signOut} variant="destructive">
               Kijelentkezés
             </Button>
-            <Link href="Profile">
+            <Link href="/Profile">
               <Image
                 src={session?.user.image}
                 width={37}
@@ -57,9 +57,6 @@ const Nav = () => {
           </div>
         ) : (
           <div className="flex items-center">
-            <Link href="" className="link">
-              Aukció
-            </Link>
             {providers &&
               Object.values(providers).map((provider) => (
                 <Button

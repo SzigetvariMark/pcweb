@@ -51,7 +51,7 @@ const Profile = () => {
     <div className="flex-col">
       <div className="flex gap-32 p-6 mt-6 shadow-xl border rounded-lg">
         <div>
-          <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
+          <h3 className=" bg-white/20 border-l-2 border-blue-400 rounded-md p-2 mb-4 font-semibold text-2xl">
             Alapvető információ
           </h3>
           <div className="flex gap-12">
@@ -87,7 +87,7 @@ const Profile = () => {
       </div>
       <div className="shadow-xl border rounded-lg p-4 mt-6">
         <div>
-          <h3 className=" bg-white/20 border-l-2 border-amber-800 rounded-md p-2 mb-4 font-semibold text-2xl">
+          <h3 className=" bg-white/20 border-l-2 border-blue-400 rounded-md p-2 mb-4 font-semibold text-2xl">
             Rendelési Információk
           </h3>
           <div className="max-xl:flex max-xl:gap-4 max-xl:justify-center max-xl:items-center">

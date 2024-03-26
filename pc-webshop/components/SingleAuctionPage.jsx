@@ -8,14 +8,14 @@ const SingleAuctionPage = ({ auction }) => {
   const { addProduct } = useContext(CartContext);
   return (
     <>
-      <div className="mt-6 flex justify-around w-full">
-        <div className="shadow-2xl p-10 rounded-xl">
+      <div className="mt-6 flex justify-around w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl">
+        <div className="p-10">
           <div className="flex justify-center">
             <img src={activeImages} alt="kep" className="h-44" />
           </div>
           <div className="flex gap-10 mt-6">
             {allImg.map((image, index) => (
-              <button onClick={() => setActiveImages(image)}>
+              <button onMouseEnter={() => setActiveImages(image)}>
                 <img
                   key={index}
                   src={image}
@@ -26,7 +26,7 @@ const SingleAuctionPage = ({ auction }) => {
             ))}
           </div>
         </div>
-        <div className="shadow-2xl p-10 rounded-xl flex flex-col justify-between">
+        <div className="p-10 flex flex-col justify-between">
           <div>
             <h1 className="title">{auction.title}</h1>
             <p className="text-2xl font-bold text-red-500">{auction.price}Ft</p>
@@ -51,7 +51,7 @@ const SingleAuctionPage = ({ auction }) => {
           </div>
         </div>
       </div>
-      <div className="mt-6 shadow-2xl p-10">
+      <div className="mt-6 shadow-2xl p-10 w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl">
         <h2 className="title">Leírás:</h2>
         <p className="mt-2">{auction.description}</p>
         <h2 className="title mt-4">Paraméter:</h2>

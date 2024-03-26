@@ -8,25 +8,25 @@ const SinglePage = ({ product }) => {
   const { addProduct } = useContext(CartContext);
   return (
     <>
-      <div className="mt-6 flex justify-around w-full">
-        <div className="shadow-2xl p-10 rounded-xl">
+      <div className="mt-6 flex justify-around w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl ">
+        <div className="p-10">
           <div className="flex justify-center">
             <img src={activeImages} alt="kep" className="h-44" />
           </div>
           <div className="flex gap-10 mt-6">
             {allImg.map((image, index) => (
-              <button onClick={() => setActiveImages(image)}>
+              <button onMouseEnter={() => setActiveImages(image)}>
                 <img
                   key={index}
                   src={image}
                   alt="kep"
-                  className="h-20 hover:border-2 transition-transform border-gray-500 p-2 rounded-sm"
+                  className="h-20 hover:border-2 transition-transform border-blue-400/95 p-2 rounded-sm"
                 />
               </button>
             ))}
           </div>
         </div>
-        <div className="shadow-2xl p-10 rounded-xl flex flex-col justify-between">
+        <div className="p-10 flex flex-col justify-between text-right m-2">
           <div>
             <h1 className="title">{product.title}</h1>
             <p className="text-2xl font-bold text-red-500">{product.price}Ft</p>
@@ -51,7 +51,7 @@ const SinglePage = ({ product }) => {
           </div>
         </div>
       </div>
-      <div className="mt-6 shadow-2xl p-10">
+      <div className="mt-12 shadow-2xl border-2 border-blue-400/95 rounded-2xl p-10 w-full">
         <h2 className="title">Leírás:</h2>
         <p className="mt-2">{product.description}</p>
         <h2 className="title mt-4">Paraméter:</h2>
