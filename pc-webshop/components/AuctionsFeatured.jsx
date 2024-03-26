@@ -28,31 +28,29 @@ const AuctionsFeatured = ({ _id, title, price, images, endDate }) => {
 
   const url = "/auction/" + _id;
   return (
-    <>
-      <div className="flex flex-col gap-16 p-10 items-center border-2 rounded-lg shadow-md mt-8 ">
-        <div className="flex items-center gap-40">
-          <div>
-            <h2 className="title">{title}</h2>
-            <div className="flex gap-4">
-              <p>{price}Ft</p>
-              <p>4 licit</p>
-              <div>
-                <p>
-                  {days} nap {hours} óra {minutes} perc {seconds} másodperc
-                  maradt hátra
-                </p>
-              </div>
+    <div className="border-2 shadow-xl border-blue-400/95 rounded-2xl p-10">
+      <div className="flex items-center gap-40 max-lg:flex-col max-lg:gap-2 max-lg:text-center max-lg:p-2">
+        <div>
+          <h2 className="title">{title}</h2>
+          <div className="font-semibold">
+            <p className="font-bold text-lg text-red-500">{price}Ft</p>
+            <p>4 licit</p>
+            <div>
+              <p>
+                {days} nap {hours} óra {minutes} perc {seconds} másodperc maradt
+                hátra
+              </p>
             </div>
-            <Link href={url}>
-              <Button className="mt-2">Licitálok</Button>
-            </Link>
           </div>
           <Link href={url}>
-            <img src={images[0]} alt="kep" className="w-64" />
+            <Button className="mt-2">Licitálok</Button>
           </Link>
         </div>
+        <Link href={url}>
+          <img src={images[0]} alt="kep" className="w-64" />
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 

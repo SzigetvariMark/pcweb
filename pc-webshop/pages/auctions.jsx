@@ -6,7 +6,7 @@ import { Auction } from "@models/AuctionProduct";
 export default function auctions({ auctions }) {
   return (
     <>
-      <h1 className="font-bold mt-6 bg-slate-700 p-4 rounded-3xl text-yellow-50 text-xl font-satoshi">
+      <h1 className="font-bold mt-6 bg-blue-400/75 p-4 rounded-3xl text-black text-xl font-satoshi">
         Jelenleg futó Aukciók
       </h1>
       <AuctionsFlex auctions={auctions} />
