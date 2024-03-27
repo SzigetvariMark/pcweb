@@ -40,20 +40,28 @@ export default function Orders() {
               <TableHead>Orders</TableHead>
             </TableRow>
           </TableHeader>
-          {allOrders.map((items, index) => (
-            <TableBody key={index}>
-              <TableRow>
-                <TableCell className="font-medium">{items.name}</TableCell>
-                <TableCell>{items.phone}</TableCell>
-                <TableCell>{items.email}</TableCell>
-                <TableCell>{items.city}</TableCell>
-                <TableCell>{items.address}</TableCell>
-                <TableCell>{items.postal}</TableCell>
-                <TableCell>{items.floor}</TableCell>
-                <TableCell>{items.door}</TableCell>
-              </TableRow>
-            </TableBody>
-          ))}
+          {allOrders.length > 0 &&
+            allOrders.map((items, index) => (
+              <TableBody key={index}>
+                <TableRow>
+                  <TableCell className="font-medium">{items.name}</TableCell>
+                  <TableCell>{items.phone}</TableCell>
+                  <TableCell>{items.email}</TableCell>
+                  <TableCell>{items.city}</TableCell>
+                  <TableCell>{items.address}</TableCell>
+                  <TableCell>{items.postal}</TableCell>
+                  <TableCell>{items.floor}</TableCell>
+                  <TableCell>{items.door}</TableCell>
+                  <TableCell>
+                    {items.line_items.map((l) => (
+                      <>
+                        {l.price_data.product_data.name} X {l.quantity}
+                      </>
+                    ))}
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            ))}
         </Table>
       </div>
     </Layout>
