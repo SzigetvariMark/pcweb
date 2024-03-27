@@ -19,6 +19,10 @@ const ProductSchema = new Schema(
       type: mongoose.Types.ObjectId,
       ref: "Category",
     },
+    amount: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true,

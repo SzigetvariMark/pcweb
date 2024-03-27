@@ -7,6 +7,7 @@ export default function ProductForm({
   title: existingTitle,
   description: existingDescription,
   price: existingPrice,
+  amount: existingAmount,
   images: existingImages,
   category: assignedCategory,
 }) {
@@ -16,6 +17,7 @@ export default function ProductForm({
   const [goToProducts, setGoToProducts] = useState(false);
   const [category, setCategory] = useState(assignedCategory || "");
   const [categories, setCategories] = useState([]);
+  const [amount, setAmount] = useState(existingAmount || "");
   const router = useRouter();
   const [images, setImages] = useState(existingImages || [""]);
   useEffect(() => {
@@ -36,7 +38,14 @@ export default function ProductForm({
 
   async function saveProduct(ev) {
     ev.preventDefault();
-    const data = { title, description, price, category, images: images || [] };
+    const data = {
+      title,
+      description,
+      price,
+      category,
+      amount,
+      images: images || [],
+    };
     if (_id) {
       await axios.put("/api/products", { ...data, _id });
     } else {
@@ -95,6 +104,14 @@ export default function ProductForm({
         placeholder="price"
         value={price}
         onChange={(ev) => setPrice(ev.target.value)}
+        className="mb-2"
+      />
+      <label>Amount</label>
+      <input
+        type="number"
+        placeholder="amount"
+        value={amount}
+        onChange={(ev) => setAmount(ev.target.value)}
         className="mb-2"
       />
       <button type="submit" className="btn-primary">
