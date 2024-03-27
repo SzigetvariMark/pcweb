@@ -20,7 +20,7 @@ const SingleAuctionPage = ({ auction }) => {
                   key={index}
                   src={image}
                   alt="kep"
-                  className="h-20 hover:border-2 transition-transform border-gray-500 p-2 rounded-sm"
+                  className="h-20 hover:border-2 transition-transform border-blue-400/95 p-2 rounded-sm"
                 />
               </button>
             ))}
@@ -51,7 +51,7 @@ const SingleAuctionPage = ({ auction }) => {
           </div>
         </div>
       </div>
-      <div className="mt-6 shadow-2xl p-10 w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl">
+      <div className="mt-6 p-10 w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl">
         <h2 className="title">Leírás:</h2>
         <p className="mt-2">{auction.description}</p>
         <h2 className="title mt-4">Paraméter:</h2>
