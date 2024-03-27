@@ -1,11 +1,11 @@
 import clientPromise from "@lib/mongodb";
-import NextAuth from "next-auth";
+import NextAuth, { getServerSession } from "next-auth";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import GoogleProvider from "next-auth/providers/google";
 
 const adminEmail = ["brosztl.mate@gmail.com"];
 
-export default NextAuth({
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
@@ -22,4 +22,13 @@ export default NextAuth({
       }
     },
   },
-});
+};
+
+export default NextAuth(authOptions);
+
+export async function isAdminRequest(req, res) {
+  const session = await getServerSession(req, res, authOptions);
+  if (!adminEmail.includes(session?.user?.email)) {
+    throw "not an admin";
+  }
+}
