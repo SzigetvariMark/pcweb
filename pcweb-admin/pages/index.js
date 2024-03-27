@@ -19,7 +19,7 @@ export default function Home() {
         <h2>
           Hello,<b>{session.user.name}</b>
         </h2>
-        <div className="flex bg-gray-300 text-black gap-1 rounded-2xl overflow-hidden">
+        <div className="flex bg-gray-300 text-black gap-1 rounded-2xl overflow-hidden max">
           <img src={session.user.image} alt="user image" className="w-8 h-8" />
           <span className="py-1 px-2 font-bold">{session.user.name}</span>
         </div>
