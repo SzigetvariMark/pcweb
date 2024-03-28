@@ -17,7 +17,6 @@ export default function Orders() {
   useEffect(() => {
     axios.get("/api/orders").then((respone) => {
       setAllOrders(respone.data);
-      console.log(respone.data);
     });
   }, []);
 
