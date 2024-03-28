@@ -15,9 +15,8 @@ const SinglePage = ({ product }) => {
           </div>
           <div className="flex gap-10 mt-6">
             {allImg.map((image, index) => (
-              <button onMouseEnter={() => setActiveImages(image)}>
+              <button key={index} onMouseEnter={() => setActiveImages(image)}>
                 <img
-                  key={index}
                   src={image}
                   alt="kep"
                   className="h-20 hover:border-2 transition-transform border-blue-400/95 p-2 rounded-sm"
@@ -30,7 +29,10 @@ const SinglePage = ({ product }) => {
           <div>
             <h1 className="title">{product.title}</h1>
             <p className="text-2xl font-bold text-red-500">{product.price}Ft</p>
-            <p>Raktáron: 3db</p>
+            <p className="text-xl">
+              <span className="font-semibold">{product.amount}</span> darab van
+              raktáron
+            </p>
           </div>
           <div>
             <Button

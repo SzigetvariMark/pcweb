@@ -15,9 +15,8 @@ const SingleAuctionPage = ({ auction }) => {
           </div>
           <div className="flex gap-10 mt-6">
             {allImg.map((image, index) => (
-              <button onMouseEnter={() => setActiveImages(image)}>
+              <button key={index} onMouseEnter={() => setActiveImages(image)}>
                 <img
-                  key={index}
                   src={image}
                   alt="kep"
                   className="h-20 hover:border-2 transition-transform border-blue-400/95 p-2 rounded-sm"
