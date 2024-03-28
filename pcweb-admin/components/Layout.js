@@ -42,7 +42,7 @@ export default function Layout({ children }) {
       </button>
       <div className="flex">
         <Nav show={showNav} />
-        <div className="bg-white h-full border-4 shadow-2xl border-stone-950 flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
+        <div className="bg-white min-h-screen border-4 shadow-2xl border-stone-950 flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
           {children}
         </div>
       </div>
