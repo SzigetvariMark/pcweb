@@ -8,7 +8,7 @@ const SinglePage = ({ product }) => {
   const { addProduct } = useContext(CartContext);
   return (
     <>
-      <div className="mt-6 flex justify-around w-full shadow-2xl border-2 border-blue-400/95 rounded-2xl ">
+      <div className="mt-6 flex w-full justify-around shadow-2xl border-2 border-blue-400/95 rounded-2xl max-md:flex-col max-md:w-auto">
         <div className="p-10">
           <div className="flex justify-center">
             <img src={activeImages} alt="kep" className="h-44" />
@@ -25,7 +25,7 @@ const SinglePage = ({ product }) => {
             ))}
           </div>
         </div>
-        <div className="p-10 flex flex-col justify-between text-right m-2">
+        <div className="p-10 flex flex-col justify-between text-right m-2 max-md:p-4 max-md:text-center max-md:gap-4">
           <div>
             <h1 className="title">{product.title}</h1>
             <p className="text-2xl font-bold text-red-500">{product.price}Ft</p>
@@ -37,7 +37,7 @@ const SinglePage = ({ product }) => {
           <div>
             <Button
               variant="default"
-              className="w-full text-lg gap-2"
+              className="w-full text-lg gap-2 max-md:w-auto max-md:p-6 max-md:rounded-xl"
               onClick={() => addProduct(product._id)}
             >
               <svg
@@ -55,7 +55,9 @@ const SinglePage = ({ product }) => {
       </div>
       <div className="mt-12 shadow-2xl border-2 border-blue-400/95 rounded-2xl p-10 w-full">
         <h2 className="title">Leírás:</h2>
-        <p className="mt-2">{product.description}</p>
+        <p className="mt-2 text-lg font-mono justify-evenly">
+          {product.description}
+        </p>
         <h2 className="title mt-4">Paraméter:</h2>
       </div>
     </>
