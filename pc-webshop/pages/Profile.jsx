@@ -117,7 +117,12 @@ const Profile = () => {
                   <label className="font-light">{items.door}</label>
                 </div>
                 <div className="profileOrderList">
-                  <p className="Title2">Amiket rendelt:</p>
+                  <p className="Title2">Termék:</p>
+                  <label className="font-light">
+                    {items.line_items.map((l) => (
+                      <>{l.price_data.product_data.name}</>
+                    ))}
+                  </label>
                 </div>
                 <Button
                   variant="destructive"
